@@ -55,6 +55,7 @@ public class EvaluationServiceImpl implements EvaluationService {
         evaluation.setTemperature(weatherData.getTemperature());
         evaluation.setPrecipitation(weatherData.getPrecipitation());
         evaluation.setHumidity(weatherData.getHumidity());
+        evaluation.setElevation(weatherData.getElevation());
 
         // TODO: reemplazar por el motor matemático (AHP + lógica difusa)
         evaluation.setScore(80.0);

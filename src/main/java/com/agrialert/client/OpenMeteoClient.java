@@ -65,6 +65,7 @@ public class OpenMeteoClient {
                 .temperature(response.getDaily().getTemperature_2m_mean().get(index))
                 .precipitation(response.getDaily().getPrecipitation_sum().get(index))
                 .humidity(response.getDaily().getRelative_humidity_2m_mean().get(index))
+                .elevation(response.getElevation())
                 .build();
     }
 }

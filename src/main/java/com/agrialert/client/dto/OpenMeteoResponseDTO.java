@@ -11,6 +11,7 @@ import java.util.List;
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class OpenMeteoResponseDTO {
 
+    private Double elevation;
     private Daily daily;
 
     @Getter

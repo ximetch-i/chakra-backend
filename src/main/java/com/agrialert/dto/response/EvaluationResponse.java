@@ -26,6 +26,7 @@ public class EvaluationResponse {
     private Double temperature;
     private Double precipitation;
     private Double humidity;
+    private Double elevation;
     private Double score;
     private RiskLevel riskLevel;
     private String recommendation;

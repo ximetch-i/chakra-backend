@@ -64,10 +64,17 @@ public class NasaPowerClient {
         Double precipitation = extractValue(parameter, "PRECTOTCORR", monthKey);
         Double humidity = extractValue(parameter, "RH2M", monthKey);
 
+        Double elevation = null;
+        if (response.getGeometry() != null && response.getGeometry().getCoordinates() != null
+                && response.getGeometry().getCoordinates().size() > 2) {
+            elevation = response.getGeometry().getCoordinates().get(2);
+        }
+
         return WeatherDataDTO.builder()
                 .temperature(temperature)
                 .precipitation(precipitation)
                 .humidity(humidity)
+                .elevation(elevation)
                 .build();
     }
 
