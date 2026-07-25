@@ -50,7 +50,7 @@ public class Evaluation {
     @Column(nullable = false)
     private Double humidity;
 
-    @Column(name = "elevation")
+    @Column(name = "elevation", nullable = false)
     private Double elevation;
 
     @Column(nullable = false)
