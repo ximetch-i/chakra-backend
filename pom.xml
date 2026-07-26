@@ -11,7 +11,7 @@
         <relativePath/>
     </parent>
 
-    <groupId>com.agrialert</groupId>
+    <groupId>com.chakra</groupId>
     <artifactId>chakra-backend</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>chakra-backend</name>

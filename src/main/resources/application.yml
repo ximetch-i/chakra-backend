@@ -24,9 +24,6 @@ spring:
 # Propiedades propias de Chakra
 chakra:
   weather:
-    open-meteo:
-      base-url: https://api.open-meteo.com/v1/forecast
-      forecast-days: 14
     nasa-power:
       base-url: https://power.larc.nasa.gov/api/temporal/climatology/point
       community: AG
@@ -36,4 +33,4 @@ chakra:
 
 logging:
   level:
-    com.agrialert: DEBUG
+    com.chakra: DEBUG

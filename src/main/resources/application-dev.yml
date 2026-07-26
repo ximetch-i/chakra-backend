@@ -11,4 +11,4 @@ spring:
 
 logging:
   level:
-    com.agrialert: DEBUG
+    com.chakra: DEBUG
