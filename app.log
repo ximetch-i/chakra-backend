@@ -1,0 +1,1469 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ---------------------< com.chakra:chakra-backend >----------------------
+[INFO] Building chakra-backend 0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] >>> spring-boot:3.3.5:run (default-cli) > test-compile @ chakra-backend >>>
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ chakra-backend ---
+[INFO] Copying 2 resources from src\main\resources to target\classes
+[INFO] Copying 0 resource from src\main\resources to target\classes
+[INFO] 
+[INFO] --- compiler:3.13.0:compile (default-compile) @ chakra-backend ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ chakra-backend ---
+[INFO] skip non existing resourceDirectory C:\Users\ximen\OneDrive\Documentos\coding\hackaton\demo\src\test\resources
+[INFO] 
+[INFO] --- compiler:3.13.0:testCompile (default-testCompile) @ chakra-backend ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] <<< spring-boot:3.3.5:run (default-cli) < test-compile @ chakra-backend <<<
+[INFO] 
+[INFO] 
+[INFO] --- spring-boot:3.3.5:run (default-cli) @ chakra-backend ---
+[INFO] Attaching agents: []
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.3.5)
+
+2026-07-26T00:34:39.430-05:00  INFO 30160 --- [chakra] [           main] com.chakra.ChakraApplication             : Starting ChakraApplication using Java 21.0.11 with PID 30160 (C:\Users\ximen\OneDrive\Documentos\coding\hackaton\demo\target\classes started by ximen in C:\Users\ximen\OneDrive\Documentos\coding\hackaton\demo)
+2026-07-26T00:34:39.432-05:00 DEBUG 30160 --- [chakra] [           main] com.chakra.ChakraApplication             : Running with Spring Boot v3.3.5, Spring v6.1.14
+2026-07-26T00:34:39.432-05:00  INFO 30160 --- [chakra] [           main] com.chakra.ChakraApplication             : No active profile set, falling back to 1 default profile: "default"
+2026-07-26T00:34:40.020-05:00  INFO 30160 --- [chakra] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-07-26T00:34:40.154-05:00  INFO 30160 --- [chakra] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 129 ms. Found 1 JPA repository interface.
+2026-07-26T00:34:40.807-05:00  INFO 30160 --- [chakra] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-07-26T00:34:40.824-05:00  INFO 30160 --- [chakra] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-07-26T00:34:40.825-05:00  INFO 30160 --- [chakra] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.31]
+2026-07-26T00:34:40.943-05:00  INFO 30160 --- [chakra] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-07-26T00:34:40.944-05:00  INFO 30160 --- [chakra] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1474 ms
+2026-07-26T00:34:41.103-05:00  INFO 30160 --- [chakra] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-07-26T00:34:41.181-05:00  INFO 30160 --- [chakra] [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2026-07-26T00:34:41.220-05:00  INFO 30160 --- [chakra] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-07-26T00:34:41.547-05:00  INFO 30160 --- [chakra] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-07-26T00:34:41.583-05:00  INFO 30160 --- [chakra] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-07-26T00:34:41.820-05:00  INFO 30160 --- [chakra] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@61993d18
+2026-07-26T00:34:41.821-05:00  INFO 30160 --- [chakra] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-07-26T00:34:41.868-05:00  WARN 30160 --- [chakra] [           main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-07-26T00:34:42.842-05:00  INFO 30160 --- [chakra] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+Hibernate: 
+    alter table if exists evaluations 
+       alter column recommendation set data type TEXT
+2026-07-26T00:34:42.909-05:00  INFO 30160 --- [chakra] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-07-26T00:34:43.639-05:00  INFO 30160 --- [chakra] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2026-07-26T00:34:43.644-05:00  INFO 30160 --- [chakra] [           main] com.chakra.ChakraApplication             : Started ChakraApplication in 4.589 seconds (process running for 4.91)
+2026-07-26T00:35:09.136-05:00  INFO 30160 --- [chakra] [nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-07-26T00:35:09.136-05:00  INFO 30160 --- [chakra] [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-07-26T00:35:09.137-05:00  INFO 30160 --- [chakra] [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-07-26T00:35:09.278-05:00  INFO 30160 --- [chakra] [nio-8080-exec-1] c.c.service.impl.EvaluationServiceImpl   : Consultando clima para distrito=URUBAMBA, cultivo=PAPA, fecha=2027-03-15
+2026-07-26T00:35:11.410-05:00 DEBUG 30160 --- [chakra] [nio-8080-exec-1] com.chakra.client.NasaPowerClient        : Temp NASA=8.33 C, gridElev=3739.76m, realElev=2870.0m, corrected=13.983440000000002 C
+2026-07-26T00:35:11.413-05:00 DEBUG 30160 --- [chakra] [nio-8080-exec-1] c.c.service.impl.AgriculturalModelImpl   : Scores individuales - T:74.86200000000001 P:100.0 SM:100.0 A:100.0
+2026-07-26T00:35:11.413-05:00  INFO 30160 --- [chakra] [nio-8080-exec-1] c.c.service.impl.AgriculturalModelImpl   : Evaluación completada - score:92.46 risk:FAVORABLE crop:PAPA
+Hibernate: 
+    insert 
+    into
+        evaluations
+        (created_at, crop, district, elevation, planting_date, precipitation, recommendation, risk_level, score, soil_moisture, temperature) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+    returning id
+2026-07-26T00:35:24.210-05:00  INFO 30160 --- [chakra] [nio-8080-exec-4] c.c.service.impl.EvaluationServiceImpl   : Consultando clima para distrito=URUBAMBA, cultivo=PAPA, fecha=2026-08-15
+2026-07-26T00:35:24.913-05:00 DEBUG 30160 --- [chakra] [nio-8080-exec-4] com.chakra.client.NasaPowerClient        : Temp NASA=7.86 C, gridElev=3739.76m, realElev=2870.0m, corrected=13.513440000000003 C
+2026-07-26T00:35:24.913-05:00 DEBUG 30160 --- [chakra] [nio-8080-exec-4] c.c.service.impl.AgriculturalModelImpl   : Scores individuales - T:70.94533333333335 P:24.637500000000006 SM:15.0 A:100.0
+2026-07-26T00:35:24.930-05:00  INFO 30160 --- [chakra] [nio-8080-exec-4] c.c.service.impl.AgriculturalModelImpl   : Evaluación completada - score:42.69 risk:NOT_RECOMMENDED crop:PAPA
+Hibernate: 
+    insert 
+    into
+        evaluations
+        (created_at, crop, district, elevation, planting_date, precipitation, recommendation, risk_level, score, soil_moisture, temperature) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+    returning id
+2026-07-26T00:35:25.179-05:00  INFO 30160 --- [chakra] [nio-8080-exec-6] c.c.service.impl.EvaluationServiceImpl   : Consultando clima para distrito=URUBAMBA, cultivo=PAPA, fecha=2026-09-15
+2026-07-26T00:35:25.998-05:00 DEBUG 30160 --- [chakra] [nio-8080-exec-6] com.chakra.client.NasaPowerClient        : Temp NASA=8.54 C, gridElev=3739.76m, realElev=2870.0m, corrected=14.19344 C
+2026-07-26T00:35:25.998-05:00 DEBUG 30160 --- [chakra] [nio-8080-exec-6] c.c.service.impl.AgriculturalModelImpl   : Scores individuales - T:76.61200000000001 P:54.75000000000001 SM:0.0 A:100.0
+2026-07-26T00:35:25.999-05:00  INFO 30160 --- [chakra] [nio-8080-exec-6] c.c.service.impl.AgriculturalModelImpl   : Evaluación completada - score:46.67 risk:NOT_RECOMMENDED crop:PAPA
+Hibernate: 
+    insert 
+    into
+        evaluations
+        (created_at, crop, district, elevation, planting_date, precipitation, recommendation, risk_level, score, soil_moisture, temperature) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+    returning id
+2026-07-26T00:35:26.050-05:00  INFO 30160 --- [chakra] [nio-8080-exec-5] c.c.service.impl.EvaluationServiceImpl   : Consultando clima para distrito=URUBAMBA, cultivo=PAPA, fecha=2026-10-15
+2026-07-26T00:35:26.510-05:00 DEBUG 30160 --- [chakra] [nio-8080-exec-5] com.chakra.client.NasaPowerClient        : Temp NASA=8.9 C, gridElev=3739.76m, realElev=2870.0m, corrected=14.553440000000002 C
+2026-07-26T00:35:26.526-05:00 DEBUG 30160 --- [chakra] [nio-8080-exec-5] c.c.service.impl.AgriculturalModelImpl   : Scores individuales - T:79.61200000000001 P:100.0 SM:30.0 A:100.0
+2026-07-26T00:35:26.527-05:00  INFO 30160 --- [chakra] [nio-8080-exec-5] c.c.service.impl.AgriculturalModelImpl   : Evaluación completada - score:69.38 risk:CAUTION crop:PAPA
+Hibernate: 
+    insert 
+    into
+        evaluations
+        (created_at, crop, district, elevation, planting_date, precipitation, recommendation, risk_level, score, soil_moisture, temperature) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+    returning id
+2026-07-26T00:35:26.601-05:00  INFO 30160 --- [chakra] [nio-8080-exec-3] c.c.service.impl.EvaluationServiceImpl   : Consultando clima para distrito=URUBAMBA, cultivo=PAPA, fecha=2026-11-15
+2026-07-26T00:35:27.384-05:00 DEBUG 30160 --- [chakra] [nio-8080-exec-3] com.chakra.client.NasaPowerClient        : Temp NASA=9.14 C, gridElev=3739.76m, realElev=2870.0m, corrected=14.793440000000002 C
+2026-07-26T00:35:27.393-05:00 DEBUG 30160 --- [chakra] [nio-8080-exec-3] c.c.service.impl.AgriculturalModelImpl   : Scores individuales - T:81.61200000000001 P:100.0 SM:60.0 A:100.0
+2026-07-26T00:35:27.393-05:00  INFO 30160 --- [chakra] [nio-8080-exec-3] c.c.service.impl.AgriculturalModelImpl   : Evaluación completada - score:80.48 risk:FAVORABLE crop:PAPA
+Hibernate: 
+    insert 
+    into
+        evaluations
+        (created_at, crop, district, elevation, planting_date, precipitation, recommendation, risk_level, score, soil_moisture, temperature) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+    returning id
+2026-07-26T00:35:27.482-05:00  INFO 30160 --- [chakra] [nio-8080-exec-8] c.c.service.impl.EvaluationServiceImpl   : Consultando clima para distrito=URUBAMBA, cultivo=PAPA, fecha=2026-12-15
+2026-07-26T00:35:28.198-05:00 DEBUG 30160 --- [chakra] [nio-8080-exec-8] com.chakra.client.NasaPowerClient        : Temp NASA=8.77 C, gridElev=3739.76m, realElev=2870.0m, corrected=14.423440000000001 C
+2026-07-26T00:35:28.198-05:00 DEBUG 30160 --- [chakra] [nio-8080-exec-8] c.c.service.impl.AgriculturalModelImpl   : Scores individuales - T:78.52866666666668 P:65.55833333333332 SM:100.0 A:100.0
+2026-07-26T00:35:28.198-05:00  INFO 30160 --- [chakra] [nio-8080-exec-8] c.c.service.impl.AgriculturalModelImpl   : Evaluación completada - score:84.95 risk:FAVORABLE crop:PAPA
+Hibernate: 
+    insert 
+    into
+        evaluations
+        (created_at, crop, district, elevation, planting_date, precipitation, recommendation, risk_level, score, soil_moisture, temperature) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+    returning id
+2026-07-26T00:35:28.287-05:00  INFO 30160 --- [chakra] [nio-8080-exec-7] c.c.service.impl.EvaluationServiceImpl   : Consultando clima para distrito=URUBAMBA, cultivo=PAPA, fecha=2027-01-15
+2026-07-26T00:35:29.075-05:00 DEBUG 30160 --- [chakra] [nio-8080-exec-7] com.chakra.client.NasaPowerClient        : Temp NASA=8.52 C, gridElev=3739.76m, realElev=2870.0m, corrected=14.173440000000001 C
+2026-07-26T00:35:29.077-05:00 DEBUG 30160 --- [chakra] [nio-8080-exec-7] c.c.service.impl.AgriculturalModelImpl   : Scores individuales - T:76.44533333333335 P:73.1625 SM:100.0 A:100.0
+2026-07-26T00:35:29.077-05:00  INFO 30160 --- [chakra] [nio-8080-exec-7] c.c.service.impl.AgriculturalModelImpl   : Evaluación completada - score:86.22 risk:FAVORABLE crop:PAPA
+Hibernate: 
+    insert 
+    into
+        evaluations
+        (created_at, crop, district, elevation, planting_date, precipitation, recommendation, risk_level, score, soil_moisture, temperature) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+    returning id
+2026-07-26T00:35:29.211-05:00  INFO 30160 --- [chakra] [io-8080-exec-10] c.c.service.impl.EvaluationServiceImpl   : Consultando clima para distrito=URUBAMBA, cultivo=PAPA, fecha=2027-02-15
+2026-07-26T00:35:29.679-05:00 DEBUG 30160 --- [chakra] [io-8080-exec-10] com.chakra.client.NasaPowerClient        : Temp NASA=8.48 C, gridElev=3739.76m, realElev=2870.0m, corrected=14.133440000000002 C
+2026-07-26T00:35:29.679-05:00 DEBUG 30160 --- [chakra] [io-8080-exec-10] c.c.service.impl.AgriculturalModelImpl   : Scores individuales - T:76.11200000000001 P:63.429166666666646 SM:100.0 A:100.0
+2026-07-26T00:35:29.679-05:00  INFO 30160 --- [chakra] [io-8080-exec-10] c.c.service.impl.AgriculturalModelImpl   : Evaluación completada - score:83.69 risk:FAVORABLE crop:PAPA
+Hibernate: 
+    insert 
+    into
+        evaluations
+        (created_at, crop, district, elevation, planting_date, precipitation, recommendation, risk_level, score, soil_moisture, temperature) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+    returning id
+2026-07-26T00:35:29.746-05:00  INFO 30160 --- [chakra] [nio-8080-exec-9] c.c.service.impl.EvaluationServiceImpl   : Consultando clima para distrito=URUBAMBA, cultivo=PAPA, fecha=2027-03-15
+2026-07-26T00:35:30.404-05:00 DEBUG 30160 --- [chakra] [nio-8080-exec-9] com.chakra.client.NasaPowerClient        : Temp NASA=8.33 C, gridElev=3739.76m, realElev=2870.0m, corrected=13.983440000000002 C
+2026-07-26T00:35:30.404-05:00 DEBUG 30160 --- [chakra] [nio-8080-exec-9] c.c.service.impl.AgriculturalModelImpl   : Scores individuales - T:74.86200000000001 P:100.0 SM:100.0 A:100.0
+2026-07-26T00:35:30.404-05:00  INFO 30160 --- [chakra] [nio-8080-exec-9] c.c.service.impl.AgriculturalModelImpl   : Evaluación completada - score:92.46 risk:FAVORABLE crop:PAPA
+Hibernate: 
+    insert 
+    into
+        evaluations
+        (created_at, crop, district, elevation, planting_date, precipitation, recommendation, risk_level, score, soil_moisture, temperature) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+    returning id
+2026-07-26T00:35:30.497-05:00  INFO 30160 --- [chakra] [nio-8080-exec-1] c.c.service.impl.EvaluationServiceImpl   : Consultando clima para distrito=URUBAMBA, cultivo=PAPA, fecha=2027-04-15
+2026-07-26T00:35:30.869-05:00 DEBUG 30160 --- [chakra] [nio-8080-exec-1] com.chakra.client.NasaPowerClient        : Temp NASA=8.23 C, gridElev=3739.76m, realElev=2870.0m, corrected=13.883440000000002 C
+2026-07-26T00:35:30.871-05:00 DEBUG 30160 --- [chakra] [nio-8080-exec-1] c.c.service.impl.AgriculturalModelImpl   : Scores individuales - T:74.02866666666668 P:100.0 SM:100.0 A:100.0
+2026-07-26T00:35:30.871-05:00  INFO 30160 --- [chakra] [nio-8080-exec-1] c.c.service.impl.AgriculturalModelImpl   : Evaluación completada - score:92.21 risk:FAVORABLE crop:PAPA
+Hibernate: 
+    insert 
+    into
+        evaluations
+        (created_at, crop, district, elevation, planting_date, precipitation, recommendation, risk_level, score, soil_moisture, temperature) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+    returning id
+2026-07-26T00:35:30.944-05:00  INFO 30160 --- [chakra] [nio-8080-exec-2] c.c.service.impl.EvaluationServiceImpl   : Consultando clima para distrito=URUBAMBA, cultivo=PAPA, fecha=2027-05-15
+2026-07-26T00:35:31.730-05:00 DEBUG 30160 --- [chakra] [nio-8080-exec-2] com.chakra.client.NasaPowerClient        : Temp NASA=7.86 C, gridElev=3739.76m, realElev=2870.0m, corrected=13.513440000000003 C
+2026-07-26T00:35:31.730-05:00 DEBUG 30160 --- [chakra] [nio-8080-exec-2] c.c.service.impl.AgriculturalModelImpl   : Scores individuales - T:70.94533333333335 P:25.550000000000004 SM:100.0 A:100.0
+2026-07-26T00:35:31.730-05:00  INFO 30160 --- [chakra] [nio-8080-exec-2] c.c.service.impl.AgriculturalModelImpl   : Evaluación completada - score:72.67 risk:CAUTION crop:PAPA
+Hibernate: 
+    insert 
+    into
+        evaluations
+        (created_at, crop, district, elevation, planting_date, precipitation, recommendation, risk_level, score, soil_moisture, temperature) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+    returning id
+2026-07-26T00:35:31.784-05:00  INFO 30160 --- [chakra] [nio-8080-exec-4] c.c.service.impl.EvaluationServiceImpl   : Consultando clima para distrito=URUBAMBA, cultivo=PAPA, fecha=2027-06-15
+2026-07-26T00:35:32.548-05:00 DEBUG 30160 --- [chakra] [nio-8080-exec-4] com.chakra.client.NasaPowerClient        : Temp NASA=7.46 C, gridElev=3739.76m, realElev=2870.0m, corrected=13.11344 C
+2026-07-26T00:35:32.549-05:00 DEBUG 30160 --- [chakra] [nio-8080-exec-4] c.c.service.impl.AgriculturalModelImpl   : Scores individuales - T:67.61200000000001 P:12.775000000000002 SM:75.00000000000003 A:100.0
+2026-07-26T00:35:32.549-05:00  INFO 30160 --- [chakra] [nio-8080-exec-4] c.c.service.impl.AgriculturalModelImpl   : Evaluación completada - score:59.73 risk:CAUTION crop:PAPA
+Hibernate: 
+    insert 
+    into
+        evaluations
+        (created_at, crop, district, elevation, planting_date, precipitation, recommendation, risk_level, score, soil_moisture, temperature) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+    returning id
+2026-07-26T00:35:32.611-05:00  INFO 30160 --- [chakra] [nio-8080-exec-6] c.c.service.impl.EvaluationServiceImpl   : Consultando clima para distrito=OLLANTAYTAMBO, cultivo=PAPA, fecha=2026-08-15
+2026-07-26T00:35:33.347-05:00 DEBUG 30160 --- [chakra] [nio-8080-exec-6] com.chakra.client.NasaPowerClient        : Temp NASA=8.34 C, gridElev=3724.94m, realElev=2810.0m, corrected=14.28711 C
+2026-07-26T00:35:33.347-05:00 DEBUG 30160 --- [chakra] [nio-8080-exec-6] c.c.service.impl.AgriculturalModelImpl   : Scores individuales - T:77.39258333333333 P:31.02500000000001 SM:0.0 A:100.0
+2026-07-26T00:35:33.347-05:00  INFO 30160 --- [chakra] [nio-8080-exec-6] c.c.service.impl.AgriculturalModelImpl   : Evaluación completada - score:40.97 risk:NOT_RECOMMENDED crop:PAPA
+Hibernate: 
+    insert 
+    into
+        evaluations
+        (created_at, crop, district, elevation, planting_date, precipitation, recommendation, risk_level, score, soil_moisture, temperature) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+    returning id
+2026-07-26T00:35:33.416-05:00  INFO 30160 --- [chakra] [nio-8080-exec-5] c.c.service.impl.EvaluationServiceImpl   : Consultando clima para distrito=OLLANTAYTAMBO, cultivo=PAPA, fecha=2026-09-15
+2026-07-26T00:35:34.184-05:00 DEBUG 30160 --- [chakra] [nio-8080-exec-5] com.chakra.client.NasaPowerClient        : Temp NASA=8.92 C, gridElev=3724.94m, realElev=2810.0m, corrected=14.86711 C
+2026-07-26T00:35:34.184-05:00 DEBUG 30160 --- [chakra] [nio-8080-exec-5] c.c.service.impl.AgriculturalModelImpl   : Scores individuales - T:82.22591666666666 P:68.4375 SM:0.0 A:100.0
+2026-07-26T00:35:34.184-05:00  INFO 30160 --- [chakra] [nio-8080-exec-5] c.c.service.impl.AgriculturalModelImpl   : Evaluación completada - score:51.78 risk:CAUTION crop:PAPA
+Hibernate: 
+    insert 
+    into
+        evaluations
+        (created_at, crop, district, elevation, planting_date, precipitation, recommendation, risk_level, score, soil_moisture, temperature) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+    returning id
+2026-07-26T00:35:34.334-05:00  INFO 30160 --- [chakra] [nio-8080-exec-3] c.c.service.impl.EvaluationServiceImpl   : Consultando clima para distrito=OLLANTAYTAMBO, cultivo=PAPA, fecha=2026-10-15
+2026-07-26T00:35:35.112-05:00 DEBUG 30160 --- [chakra] [nio-8080-exec-3] com.chakra.client.NasaPowerClient        : Temp NASA=9.15 C, gridElev=3724.94m, realElev=2810.0m, corrected=15.09711 C
+2026-07-26T00:35:35.113-05:00 DEBUG 30160 --- [chakra] [nio-8080-exec-3] c.c.service.impl.AgriculturalModelImpl   : Scores individuales - T:84.14258333333333 P:100.0 SM:0.0 A:100.0
+2026-07-26T00:35:35.113-05:00  INFO 30160 --- [chakra] [nio-8080-exec-3] c.c.service.impl.AgriculturalModelImpl   : Evaluación completada - score:60.24 risk:CAUTION crop:PAPA
+Hibernate: 
+    insert 
+    into
+        evaluations
+        (created_at, crop, district, elevation, planting_date, precipitation, recommendation, risk_level, score, soil_moisture, temperature) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+    returning id
+2026-07-26T00:35:35.213-05:00  INFO 30160 --- [chakra] [nio-8080-exec-8] c.c.service.impl.EvaluationServiceImpl   : Consultando clima para distrito=OLLANTAYTAMBO, cultivo=PAPA, fecha=2026-11-15
+2026-07-26T00:35:35.927-05:00 DEBUG 30160 --- [chakra] [nio-8080-exec-8] com.chakra.client.NasaPowerClient        : Temp NASA=9.34 C, gridElev=3724.94m, realElev=2810.0m, corrected=15.28711 C
+2026-07-26T00:35:35.927-05:00 DEBUG 30160 --- [chakra] [nio-8080-exec-8] c.c.service.impl.AgriculturalModelImpl   : Scores individuales - T:85.72591666666666 P:100.0 SM:30.0 A:100.0
+2026-07-26T00:35:35.927-05:00  INFO 30160 --- [chakra] [nio-8080-exec-8] c.c.service.impl.AgriculturalModelImpl   : Evaluación completada - score:71.22 risk:CAUTION crop:PAPA
+Hibernate: 
+    insert 
+    into
+        evaluations
+        (created_at, crop, district, elevation, planting_date, precipitation, recommendation, risk_level, score, soil_moisture, temperature) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+    returning id
+2026-07-26T00:35:35.996-05:00  INFO 30160 --- [chakra] [nio-8080-exec-7] c.c.service.impl.EvaluationServiceImpl   : Consultando clima para distrito=OLLANTAYTAMBO, cultivo=PAPA, fecha=2026-12-15
+2026-07-26T00:35:36.378-05:00 DEBUG 30160 --- [chakra] [nio-8080-exec-7] com.chakra.client.NasaPowerClient        : Temp NASA=8.7 C, gridElev=3724.94m, realElev=2810.0m, corrected=14.64711 C
+2026-07-26T00:35:36.378-05:00 DEBUG 30160 --- [chakra] [nio-8080-exec-7] c.c.service.impl.AgriculturalModelImpl   : Scores individuales - T:80.39258333333333 P:64.64583333333333 SM:80.00000000000003 A:100.0
+2026-07-26T00:35:36.378-05:00  INFO 30160 --- [chakra] [nio-8080-exec-7] c.c.service.impl.AgriculturalModelImpl   : Evaluación completada - score:78.28 risk:CAUTION crop:PAPA
+Hibernate: 
+    insert 
+    into
+        evaluations
+        (created_at, crop, district, elevation, planting_date, precipitation, recommendation, risk_level, score, soil_moisture, temperature) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+    returning id
+2026-07-26T00:35:36.445-05:00  INFO 30160 --- [chakra] [io-8080-exec-10] c.c.service.impl.EvaluationServiceImpl   : Consultando clima para distrito=OLLANTAYTAMBO, cultivo=PAPA, fecha=2027-01-15
+2026-07-26T00:35:36.831-05:00 DEBUG 30160 --- [chakra] [io-8080-exec-10] com.chakra.client.NasaPowerClient        : Temp NASA=8.55 C, gridElev=3724.94m, realElev=2810.0m, corrected=14.497110000000001 C
+2026-07-26T00:35:36.831-05:00 DEBUG 30160 --- [chakra] [io-8080-exec-10] c.c.service.impl.AgriculturalModelImpl   : Scores individuales - T:79.14258333333335 P:66.77499999999998 SM:100.0 A:100.0
+2026-07-26T00:35:36.831-05:00  INFO 30160 --- [chakra] [io-8080-exec-10] c.c.service.impl.AgriculturalModelImpl   : Evaluación completada - score:85.44 risk:FAVORABLE crop:PAPA
+Hibernate: 
+    insert 
+    into
+        evaluations
+        (created_at, crop, district, elevation, planting_date, precipitation, recommendation, risk_level, score, soil_moisture, temperature) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+    returning id
+2026-07-26T00:35:36.965-05:00  INFO 30160 --- [chakra] [nio-8080-exec-9] c.c.service.impl.EvaluationServiceImpl   : Consultando clima para distrito=OLLANTAYTAMBO, cultivo=PAPA, fecha=2027-02-15
+2026-07-26T00:35:37.664-05:00 DEBUG 30160 --- [chakra] [nio-8080-exec-9] com.chakra.client.NasaPowerClient        : Temp NASA=8.49 C, gridElev=3724.94m, realElev=2810.0m, corrected=14.43711 C
+2026-07-26T00:35:37.664-05:00 DEBUG 30160 --- [chakra] [nio-8080-exec-9] c.c.service.impl.AgriculturalModelImpl   : Scores individuales - T:78.64258333333333 P:57.04166666666666 SM:100.0 A:100.0
+2026-07-26T00:35:37.664-05:00  INFO 30160 --- [chakra] [nio-8080-exec-9] c.c.service.impl.AgriculturalModelImpl   : Evaluación completada - score:82.85 risk:FAVORABLE crop:PAPA
+Hibernate: 
+    insert 
+    into
+        evaluations
+        (created_at, crop, district, elevation, planting_date, precipitation, recommendation, risk_level, score, soil_moisture, temperature) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+    returning id
+2026-07-26T00:35:37.729-05:00  INFO 30160 --- [chakra] [nio-8080-exec-1] c.c.service.impl.EvaluationServiceImpl   : Consultando clima para distrito=OLLANTAYTAMBO, cultivo=PAPA, fecha=2027-03-15
+2026-07-26T00:35:38.449-05:00 DEBUG 30160 --- [chakra] [nio-8080-exec-1] com.chakra.client.NasaPowerClient        : Temp NASA=8.39 C, gridElev=3724.94m, realElev=2810.0m, corrected=14.337110000000001 C
+2026-07-26T00:35:38.450-05:00 DEBUG 30160 --- [chakra] [nio-8080-exec-1] c.c.service.impl.AgriculturalModelImpl   : Scores individuales - T:77.80925 P:99.625 SM:100.0 A:100.0
+2026-07-26T00:35:38.450-05:00  INFO 30160 --- [chakra] [nio-8080-exec-1] c.c.service.impl.AgriculturalModelImpl   : Evaluación completada - score:93.25 risk:FAVORABLE crop:PAPA
+Hibernate: 
+    insert 
+    into
+        evaluations
+        (created_at, crop, district, elevation, planting_date, precipitation, recommendation, risk_level, score, soil_moisture, temperature) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+    returning id
+2026-07-26T00:35:38.566-05:00  INFO 30160 --- [chakra] [nio-8080-exec-2] c.c.service.impl.EvaluationServiceImpl   : Consultando clima para distrito=OLLANTAYTAMBO, cultivo=PAPA, fecha=2027-04-15
+2026-07-26T00:35:39.302-05:00 DEBUG 30160 --- [chakra] [nio-8080-exec-2] com.chakra.client.NasaPowerClient        : Temp NASA=8.41 C, gridElev=3724.94m, realElev=2810.0m, corrected=14.35711 C
+2026-07-26T00:35:39.302-05:00 DEBUG 30160 --- [chakra] [nio-8080-exec-2] c.c.service.impl.AgriculturalModelImpl   : Scores individuales - T:77.97591666666666 P:100.0 SM:100.0 A:100.0
+2026-07-26T00:35:39.302-05:00  INFO 30160 --- [chakra] [nio-8080-exec-2] c.c.service.impl.AgriculturalModelImpl   : Evaluación completada - score:93.39 risk:FAVORABLE crop:PAPA
+Hibernate: 
+    insert 
+    into
+        evaluations
+        (created_at, crop, district, elevation, planting_date, precipitation, recommendation, risk_level, score, soil_moisture, temperature) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+    returning id
+2026-07-26T00:35:39.366-05:00  INFO 30160 --- [chakra] [nio-8080-exec-4] c.c.service.impl.EvaluationServiceImpl   : Consultando clima para distrito=OLLANTAYTAMBO, cultivo=PAPA, fecha=2027-05-15
+2026-07-26T00:35:39.755-05:00 DEBUG 30160 --- [chakra] [nio-8080-exec-4] com.chakra.client.NasaPowerClient        : Temp NASA=8.07 C, gridElev=3724.94m, realElev=2810.0m, corrected=14.01711 C
+2026-07-26T00:35:39.755-05:00 DEBUG 30160 --- [chakra] [nio-8080-exec-4] c.c.service.impl.AgriculturalModelImpl   : Scores individuales - T:75.14258333333333 P:34.675000000000004 SM:95.0 A:100.0
+2026-07-26T00:35:39.755-05:00  INFO 30160 --- [chakra] [nio-8080-exec-4] c.c.service.impl.AgriculturalModelImpl   : Evaluación completada - score:74.46 risk:CAUTION crop:PAPA
+Hibernate: 
+    insert 
+    into
+        evaluations
+        (created_at, crop, district, elevation, planting_date, precipitation, recommendation, risk_level, score, soil_moisture, temperature) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+    returning id
+2026-07-26T00:35:39.825-05:00  INFO 30160 --- [chakra] [nio-8080-exec-6] c.c.service.impl.EvaluationServiceImpl   : Consultando clima para distrito=OLLANTAYTAMBO, cultivo=PAPA, fecha=2027-06-15
+2026-07-26T00:35:40.203-05:00 DEBUG 30160 --- [chakra] [nio-8080-exec-6] com.chakra.client.NasaPowerClient        : Temp NASA=7.76 C, gridElev=3724.94m, realElev=2810.0m, corrected=13.70711 C
+2026-07-26T00:35:40.203-05:00 DEBUG 30160 --- [chakra] [nio-8080-exec-6] c.c.service.impl.AgriculturalModelImpl   : Scores individuales - T:72.55925 P:12.775000000000002 SM:45.0 A:100.0
+2026-07-26T00:35:40.203-05:00  INFO 30160 --- [chakra] [nio-8080-exec-6] c.c.service.impl.AgriculturalModelImpl   : Evaluación completada - score:50.71 risk:CAUTION crop:PAPA
+Hibernate: 
+    insert 
+    into
+        evaluations
+        (created_at, crop, district, elevation, planting_date, precipitation, recommendation, risk_level, score, soil_moisture, temperature) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+    returning id
+2026-07-26T00:35:40.264-05:00  INFO 30160 --- [chakra] [nio-8080-exec-5] c.c.service.impl.EvaluationServiceImpl   : Consultando clima para distrito=CHINCHERO, cultivo=PAPA, fecha=2026-08-15
+2026-07-26T00:35:40.970-05:00 DEBUG 30160 --- [chakra] [nio-8080-exec-5] com.chakra.client.NasaPowerClient        : Temp NASA=7.86 C, gridElev=3739.76m, realElev=3762.0m, corrected=7.715440000000002 C
+2026-07-26T00:35:40.972-05:00 DEBUG 30160 --- [chakra] [nio-8080-exec-5] c.c.service.impl.AgriculturalModelImpl   : Scores individuales - T:22.628666666666685 P:24.637500000000006 SM:15.0 A:100.0
+2026-07-26T00:35:40.972-05:00  INFO 30160 --- [chakra] [nio-8080-exec-5] c.c.service.impl.AgriculturalModelImpl   : Evaluación completada - score:28.2 risk:NOT_RECOMMENDED crop:PAPA
+Hibernate: 
+    insert 
+    into
+        evaluations
+        (created_at, crop, district, elevation, planting_date, precipitation, recommendation, risk_level, score, soil_moisture, temperature) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+    returning id
+2026-07-26T00:35:41.066-05:00  INFO 30160 --- [chakra] [nio-8080-exec-3] c.c.service.impl.EvaluationServiceImpl   : Consultando clima para distrito=CHINCHERO, cultivo=PAPA, fecha=2026-09-15
+2026-07-26T00:35:41.777-05:00 DEBUG 30160 --- [chakra] [nio-8080-exec-3] com.chakra.client.NasaPowerClient        : Temp NASA=8.54 C, gridElev=3739.76m, realElev=3762.0m, corrected=8.39544 C
+2026-07-26T00:35:41.777-05:00 DEBUG 30160 --- [chakra] [nio-8080-exec-3] c.c.service.impl.AgriculturalModelImpl   : Scores individuales - T:28.295333333333343 P:54.75000000000001 SM:0.0 A:100.0
+2026-07-26T00:35:41.777-05:00  INFO 30160 --- [chakra] [nio-8080-exec-3] c.c.service.impl.AgriculturalModelImpl   : Evaluación completada - score:32.18 risk:NOT_RECOMMENDED crop:PAPA
+Hibernate: 
+    insert 
+    into
+        evaluations
+        (created_at, crop, district, elevation, planting_date, precipitation, recommendation, risk_level, score, soil_moisture, temperature) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+    returning id
+2026-07-26T00:35:41.861-05:00  INFO 30160 --- [chakra] [nio-8080-exec-8] c.c.service.impl.EvaluationServiceImpl   : Consultando clima para distrito=CHINCHERO, cultivo=PAPA, fecha=2026-10-15
+2026-07-26T00:35:42.578-05:00 DEBUG 30160 --- [chakra] [nio-8080-exec-8] com.chakra.client.NasaPowerClient        : Temp NASA=8.9 C, gridElev=3739.76m, realElev=3762.0m, corrected=8.755440000000002 C
+2026-07-26T00:35:42.578-05:00 DEBUG 30160 --- [chakra] [nio-8080-exec-8] c.c.service.impl.AgriculturalModelImpl   : Scores individuales - T:31.29533333333335 P:100.0 SM:30.0 A:100.0
+2026-07-26T00:35:42.578-05:00  INFO 30160 --- [chakra] [nio-8080-exec-8] c.c.service.impl.AgriculturalModelImpl   : Evaluación completada - score:54.89 risk:CAUTION crop:PAPA
+Hibernate: 
+    insert 
+    into
+        evaluations
+        (created_at, crop, district, elevation, planting_date, precipitation, recommendation, risk_level, score, soil_moisture, temperature) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+    returning id
+2026-07-26T00:35:42.661-05:00  INFO 30160 --- [chakra] [nio-8080-exec-7] c.c.service.impl.EvaluationServiceImpl   : Consultando clima para distrito=CHINCHERO, cultivo=PAPA, fecha=2026-11-15
+2026-07-26T00:35:43.049-05:00 DEBUG 30160 --- [chakra] [nio-8080-exec-7] com.chakra.client.NasaPowerClient        : Temp NASA=9.14 C, gridElev=3739.76m, realElev=3762.0m, corrected=8.995440000000002 C
+2026-07-26T00:35:43.049-05:00 DEBUG 30160 --- [chakra] [nio-8080-exec-7] c.c.service.impl.AgriculturalModelImpl   : Scores individuales - T:33.29533333333335 P:100.0 SM:60.0 A:100.0
+2026-07-26T00:35:43.050-05:00  INFO 30160 --- [chakra] [nio-8080-exec-7] c.c.service.impl.AgriculturalModelImpl   : Evaluación completada - score:65.99 risk:CAUTION crop:PAPA
+Hibernate: 
+    insert 
+    into
+        evaluations
+        (created_at, crop, district, elevation, planting_date, precipitation, recommendation, risk_level, score, soil_moisture, temperature) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+    returning id
+2026-07-26T00:35:43.114-05:00  INFO 30160 --- [chakra] [io-8080-exec-10] c.c.service.impl.EvaluationServiceImpl   : Consultando clima para distrito=CHINCHERO, cultivo=PAPA, fecha=2026-12-15
+2026-07-26T00:35:43.849-05:00 DEBUG 30160 --- [chakra] [io-8080-exec-10] com.chakra.client.NasaPowerClient        : Temp NASA=8.77 C, gridElev=3739.76m, realElev=3762.0m, corrected=8.625440000000001 C
+2026-07-26T00:35:43.850-05:00 DEBUG 30160 --- [chakra] [io-8080-exec-10] c.c.service.impl.AgriculturalModelImpl   : Scores individuales - T:30.212000000000007 P:65.55833333333332 SM:100.0 A:100.0
+2026-07-26T00:35:43.850-05:00  INFO 30160 --- [chakra] [io-8080-exec-10] c.c.service.impl.AgriculturalModelImpl   : Evaluación completada - score:70.45 risk:CAUTION crop:PAPA
+Hibernate: 
+    insert 
+    into
+        evaluations
+        (created_at, crop, district, elevation, planting_date, precipitation, recommendation, risk_level, score, soil_moisture, temperature) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+    returning id
+2026-07-26T00:35:43.912-05:00  INFO 30160 --- [chakra] [nio-8080-exec-9] c.c.service.impl.EvaluationServiceImpl   : Consultando clima para distrito=CHINCHERO, cultivo=PAPA, fecha=2027-01-15
+2026-07-26T00:35:44.294-05:00 DEBUG 30160 --- [chakra] [nio-8080-exec-9] com.chakra.client.NasaPowerClient        : Temp NASA=8.52 C, gridElev=3739.76m, realElev=3762.0m, corrected=8.375440000000001 C
+2026-07-26T00:35:44.294-05:00 DEBUG 30160 --- [chakra] [nio-8080-exec-9] c.c.service.impl.AgriculturalModelImpl   : Scores individuales - T:28.128666666666675 P:73.1625 SM:100.0 A:100.0
+2026-07-26T00:35:44.294-05:00  INFO 30160 --- [chakra] [nio-8080-exec-9] c.c.service.impl.AgriculturalModelImpl   : Evaluación completada - score:71.73 risk:CAUTION crop:PAPA
+Hibernate: 
+    insert 
+    into
+        evaluations
+        (created_at, crop, district, elevation, planting_date, precipitation, recommendation, risk_level, score, soil_moisture, temperature) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+    returning id
+2026-07-26T00:35:44.344-05:00  INFO 30160 --- [chakra] [nio-8080-exec-1] c.c.service.impl.EvaluationServiceImpl   : Consultando clima para distrito=CHINCHERO, cultivo=PAPA, fecha=2027-02-15
+2026-07-26T00:35:45.064-05:00 DEBUG 30160 --- [chakra] [nio-8080-exec-1] com.chakra.client.NasaPowerClient        : Temp NASA=8.48 C, gridElev=3739.76m, realElev=3762.0m, corrected=8.335440000000002 C
+2026-07-26T00:35:45.065-05:00 DEBUG 30160 --- [chakra] [nio-8080-exec-1] c.c.service.impl.AgriculturalModelImpl   : Scores individuales - T:27.79533333333335 P:63.429166666666646 SM:100.0 A:100.0
+2026-07-26T00:35:45.065-05:00  INFO 30160 --- [chakra] [nio-8080-exec-1] c.c.service.impl.AgriculturalModelImpl   : Evaluación completada - score:69.2 risk:CAUTION crop:PAPA
+Hibernate: 
+    insert 
+    into
+        evaluations
+        (created_at, crop, district, elevation, planting_date, precipitation, recommendation, risk_level, score, soil_moisture, temperature) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+    returning id
+2026-07-26T00:35:45.129-05:00  INFO 30160 --- [chakra] [nio-8080-exec-2] c.c.service.impl.EvaluationServiceImpl   : Consultando clima para distrito=CHINCHERO, cultivo=PAPA, fecha=2027-03-15
+2026-07-26T00:35:45.525-05:00 DEBUG 30160 --- [chakra] [nio-8080-exec-2] com.chakra.client.NasaPowerClient        : Temp NASA=8.33 C, gridElev=3739.76m, realElev=3762.0m, corrected=8.185440000000002 C
+2026-07-26T00:35:45.525-05:00 DEBUG 30160 --- [chakra] [nio-8080-exec-2] c.c.service.impl.AgriculturalModelImpl   : Scores individuales - T:26.545333333333346 P:100.0 SM:100.0 A:100.0
+2026-07-26T00:35:45.525-05:00  INFO 30160 --- [chakra] [nio-8080-exec-2] c.c.service.impl.AgriculturalModelImpl   : Evaluación completada - score:77.96 risk:CAUTION crop:PAPA
+Hibernate: 
+    insert 
+    into
+        evaluations
+        (created_at, crop, district, elevation, planting_date, precipitation, recommendation, risk_level, score, soil_moisture, temperature) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+    returning id
+2026-07-26T00:35:45.630-05:00  INFO 30160 --- [chakra] [nio-8080-exec-4] c.c.service.impl.EvaluationServiceImpl   : Consultando clima para distrito=CHINCHERO, cultivo=PAPA, fecha=2027-04-15
+2026-07-26T00:35:46.332-05:00 DEBUG 30160 --- [chakra] [nio-8080-exec-4] com.chakra.client.NasaPowerClient        : Temp NASA=8.23 C, gridElev=3739.76m, realElev=3762.0m, corrected=8.085440000000002 C
+2026-07-26T00:35:46.332-05:00 DEBUG 30160 --- [chakra] [nio-8080-exec-4] c.c.service.impl.AgriculturalModelImpl   : Scores individuales - T:25.712000000000018 P:100.0 SM:100.0 A:100.0
+2026-07-26T00:35:46.332-05:00  INFO 30160 --- [chakra] [nio-8080-exec-4] c.c.service.impl.AgriculturalModelImpl   : Evaluación completada - score:77.71 risk:CAUTION crop:PAPA
+Hibernate: 
+    insert 
+    into
+        evaluations
+        (created_at, crop, district, elevation, planting_date, precipitation, recommendation, risk_level, score, soil_moisture, temperature) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+    returning id
+2026-07-26T00:35:46.406-05:00  INFO 30160 --- [chakra] [nio-8080-exec-6] c.c.service.impl.EvaluationServiceImpl   : Consultando clima para distrito=CHINCHERO, cultivo=PAPA, fecha=2027-05-15
+2026-07-26T00:35:47.107-05:00 DEBUG 30160 --- [chakra] [nio-8080-exec-6] com.chakra.client.NasaPowerClient        : Temp NASA=7.86 C, gridElev=3739.76m, realElev=3762.0m, corrected=7.715440000000002 C
+2026-07-26T00:35:47.107-05:00 DEBUG 30160 --- [chakra] [nio-8080-exec-6] c.c.service.impl.AgriculturalModelImpl   : Scores individuales - T:22.628666666666685 P:25.550000000000004 SM:100.0 A:100.0
+2026-07-26T00:35:47.107-05:00  INFO 30160 --- [chakra] [nio-8080-exec-6] c.c.service.impl.AgriculturalModelImpl   : Evaluación completada - score:58.18 risk:CAUTION crop:PAPA
+Hibernate: 
+    insert 
+    into
+        evaluations
+        (created_at, crop, district, elevation, planting_date, precipitation, recommendation, risk_level, score, soil_moisture, temperature) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+    returning id
+2026-07-26T00:35:47.148-05:00  INFO 30160 --- [chakra] [nio-8080-exec-5] c.c.service.impl.EvaluationServiceImpl   : Consultando clima para distrito=CHINCHERO, cultivo=PAPA, fecha=2027-06-15
+2026-07-26T00:35:47.529-05:00 DEBUG 30160 --- [chakra] [nio-8080-exec-5] com.chakra.client.NasaPowerClient        : Temp NASA=7.46 C, gridElev=3739.76m, realElev=3762.0m, corrected=7.3154400000000015 C
+2026-07-26T00:35:47.529-05:00 DEBUG 30160 --- [chakra] [nio-8080-exec-5] c.c.service.impl.AgriculturalModelImpl   : Scores individuales - T:19.295333333333346 P:12.775000000000002 SM:75.00000000000003 A:100.0
+2026-07-26T00:35:47.529-05:00  INFO 30160 --- [chakra] [nio-8080-exec-5] c.c.service.impl.AgriculturalModelImpl   : Evaluación completada - score:45.23 risk:NOT_RECOMMENDED crop:PAPA
+Hibernate: 
+    insert 
+    into
+        evaluations
+        (created_at, crop, district, elevation, planting_date, precipitation, recommendation, risk_level, score, soil_moisture, temperature) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+    returning id
+2026-07-26T00:35:47.608-05:00  INFO 30160 --- [chakra] [nio-8080-exec-3] c.c.service.impl.EvaluationServiceImpl   : Consultando clima para distrito=CALCA, cultivo=PAPA, fecha=2026-08-15
+2026-07-26T00:35:48.343-05:00 DEBUG 30160 --- [chakra] [nio-8080-exec-3] com.chakra.client.NasaPowerClient        : Temp NASA=7.86 C, gridElev=3739.76m, realElev=2926.0m, corrected=13.149440000000002 C
+2026-07-26T00:35:48.343-05:00 DEBUG 30160 --- [chakra] [nio-8080-exec-3] c.c.service.impl.AgriculturalModelImpl   : Scores individuales - T:67.91200000000002 P:24.637500000000006 SM:15.0 A:100.0
+2026-07-26T00:35:48.343-05:00  INFO 30160 --- [chakra] [nio-8080-exec-3] c.c.service.impl.AgriculturalModelImpl   : Evaluación completada - score:41.78 risk:NOT_RECOMMENDED crop:PAPA
+Hibernate: 
+    insert 
+    into
+        evaluations
+        (created_at, crop, district, elevation, planting_date, precipitation, recommendation, risk_level, score, soil_moisture, temperature) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+    returning id
+2026-07-26T00:35:48.421-05:00  INFO 30160 --- [chakra] [nio-8080-exec-8] c.c.service.impl.EvaluationServiceImpl   : Consultando clima para distrito=CALCA, cultivo=PAPA, fecha=2026-09-15
+2026-07-26T00:35:48.796-05:00 DEBUG 30160 --- [chakra] [nio-8080-exec-8] com.chakra.client.NasaPowerClient        : Temp NASA=8.54 C, gridElev=3739.76m, realElev=2926.0m, corrected=13.82944 C
+2026-07-26T00:35:48.796-05:00 DEBUG 30160 --- [chakra] [nio-8080-exec-8] c.c.service.impl.AgriculturalModelImpl   : Scores individuales - T:73.57866666666666 P:54.75000000000001 SM:0.0 A:100.0
+2026-07-26T00:35:48.796-05:00  INFO 30160 --- [chakra] [nio-8080-exec-8] c.c.service.impl.AgriculturalModelImpl   : Evaluación completada - score:45.76 risk:NOT_RECOMMENDED crop:PAPA
+Hibernate: 
+    insert 
+    into
+        evaluations
+        (created_at, crop, district, elevation, planting_date, precipitation, recommendation, risk_level, score, soil_moisture, temperature) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+    returning id
+2026-07-26T00:35:48.858-05:00  INFO 30160 --- [chakra] [nio-8080-exec-7] c.c.service.impl.EvaluationServiceImpl   : Consultando clima para distrito=CALCA, cultivo=PAPA, fecha=2026-10-15
+2026-07-26T00:35:49.576-05:00 DEBUG 30160 --- [chakra] [nio-8080-exec-7] com.chakra.client.NasaPowerClient        : Temp NASA=8.9 C, gridElev=3739.76m, realElev=2926.0m, corrected=14.189440000000001 C
+2026-07-26T00:35:49.576-05:00 DEBUG 30160 --- [chakra] [nio-8080-exec-7] c.c.service.impl.AgriculturalModelImpl   : Scores individuales - T:76.57866666666668 P:100.0 SM:30.0 A:100.0
+2026-07-26T00:35:49.576-05:00  INFO 30160 --- [chakra] [nio-8080-exec-7] c.c.service.impl.AgriculturalModelImpl   : Evaluación completada - score:68.47 risk:CAUTION crop:PAPA
+Hibernate: 
+    insert 
+    into
+        evaluations
+        (created_at, crop, district, elevation, planting_date, precipitation, recommendation, risk_level, score, soil_moisture, temperature) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+    returning id
+2026-07-26T00:35:49.644-05:00  INFO 30160 --- [chakra] [io-8080-exec-10] c.c.service.impl.EvaluationServiceImpl   : Consultando clima para distrito=CALCA, cultivo=PAPA, fecha=2026-11-15
+2026-07-26T00:35:50.362-05:00 DEBUG 30160 --- [chakra] [io-8080-exec-10] com.chakra.client.NasaPowerClient        : Temp NASA=9.14 C, gridElev=3739.76m, realElev=2926.0m, corrected=14.429440000000001 C
+2026-07-26T00:35:50.363-05:00 DEBUG 30160 --- [chakra] [io-8080-exec-10] c.c.service.impl.AgriculturalModelImpl   : Scores individuales - T:78.57866666666668 P:100.0 SM:60.0 A:100.0
+2026-07-26T00:35:50.363-05:00  INFO 30160 --- [chakra] [io-8080-exec-10] c.c.service.impl.AgriculturalModelImpl   : Evaluación completada - score:79.57 risk:CAUTION crop:PAPA
+Hibernate: 
+    insert 
+    into
+        evaluations
+        (created_at, crop, district, elevation, planting_date, precipitation, recommendation, risk_level, score, soil_moisture, temperature) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+    returning id
+2026-07-26T00:35:50.458-05:00  INFO 30160 --- [chakra] [nio-8080-exec-9] c.c.service.impl.EvaluationServiceImpl   : Consultando clima para distrito=CALCA, cultivo=PAPA, fecha=2026-12-15
+2026-07-26T00:35:51.152-05:00 DEBUG 30160 --- [chakra] [nio-8080-exec-9] com.chakra.client.NasaPowerClient        : Temp NASA=8.77 C, gridElev=3739.76m, realElev=2926.0m, corrected=14.05944 C
+2026-07-26T00:35:51.152-05:00 DEBUG 30160 --- [chakra] [nio-8080-exec-9] c.c.service.impl.AgriculturalModelImpl   : Scores individuales - T:75.49533333333333 P:65.55833333333332 SM:100.0 A:100.0
+2026-07-26T00:35:51.152-05:00  INFO 30160 --- [chakra] [nio-8080-exec-9] c.c.service.impl.AgriculturalModelImpl   : Evaluación completada - score:84.04 risk:FAVORABLE crop:PAPA
+Hibernate: 
+    insert 
+    into
+        evaluations
+        (created_at, crop, district, elevation, planting_date, precipitation, recommendation, risk_level, score, soil_moisture, temperature) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+    returning id
+2026-07-26T00:35:51.214-05:00  INFO 30160 --- [chakra] [nio-8080-exec-1] c.c.service.impl.EvaluationServiceImpl   : Consultando clima para distrito=CALCA, cultivo=PAPA, fecha=2027-01-15
+2026-07-26T00:35:51.611-05:00 DEBUG 30160 --- [chakra] [nio-8080-exec-1] com.chakra.client.NasaPowerClient        : Temp NASA=8.52 C, gridElev=3739.76m, realElev=2926.0m, corrected=13.80944 C
+2026-07-26T00:35:51.611-05:00 DEBUG 30160 --- [chakra] [nio-8080-exec-1] c.c.service.impl.AgriculturalModelImpl   : Scores individuales - T:73.412 P:73.1625 SM:100.0 A:100.0
+2026-07-26T00:35:51.611-05:00  INFO 30160 --- [chakra] [nio-8080-exec-1] c.c.service.impl.AgriculturalModelImpl   : Evaluación completada - score:85.31 risk:FAVORABLE crop:PAPA
+Hibernate: 
+    insert 
+    into
+        evaluations
+        (created_at, crop, district, elevation, planting_date, precipitation, recommendation, risk_level, score, soil_moisture, temperature) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+    returning id
+2026-07-26T00:35:51.662-05:00  INFO 30160 --- [chakra] [nio-8080-exec-2] c.c.service.impl.EvaluationServiceImpl   : Consultando clima para distrito=CALCA, cultivo=PAPA, fecha=2027-02-15
+2026-07-26T00:35:52.389-05:00 DEBUG 30160 --- [chakra] [nio-8080-exec-2] com.chakra.client.NasaPowerClient        : Temp NASA=8.48 C, gridElev=3739.76m, realElev=2926.0m, corrected=13.769440000000001 C
+2026-07-26T00:35:52.391-05:00 DEBUG 30160 --- [chakra] [nio-8080-exec-2] c.c.service.impl.AgriculturalModelImpl   : Scores individuales - T:73.07866666666668 P:63.429166666666646 SM:100.0 A:100.0
+2026-07-26T00:35:52.391-05:00  INFO 30160 --- [chakra] [nio-8080-exec-2] c.c.service.impl.AgriculturalModelImpl   : Evaluación completada - score:82.78 risk:FAVORABLE crop:PAPA
+Hibernate: 
+    insert 
+    into
+        evaluations
+        (created_at, crop, district, elevation, planting_date, precipitation, recommendation, risk_level, score, soil_moisture, temperature) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+    returning id
+2026-07-26T00:35:52.462-05:00  INFO 30160 --- [chakra] [nio-8080-exec-4] c.c.service.impl.EvaluationServiceImpl   : Consultando clima para distrito=CALCA, cultivo=PAPA, fecha=2027-03-15
+2026-07-26T00:35:53.166-05:00 DEBUG 30160 --- [chakra] [nio-8080-exec-4] com.chakra.client.NasaPowerClient        : Temp NASA=8.33 C, gridElev=3739.76m, realElev=2926.0m, corrected=13.61944 C
+2026-07-26T00:35:53.166-05:00 DEBUG 30160 --- [chakra] [nio-8080-exec-4] c.c.service.impl.AgriculturalModelImpl   : Scores individuales - T:71.82866666666668 P:100.0 SM:100.0 A:100.0
+2026-07-26T00:35:53.166-05:00  INFO 30160 --- [chakra] [nio-8080-exec-4] c.c.service.impl.AgriculturalModelImpl   : Evaluación completada - score:91.55 risk:FAVORABLE crop:PAPA
+Hibernate: 
+    insert 
+    into
+        evaluations
+        (created_at, crop, district, elevation, planting_date, precipitation, recommendation, risk_level, score, soil_moisture, temperature) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+    returning id
+2026-07-26T00:35:53.253-05:00  INFO 30160 --- [chakra] [nio-8080-exec-6] c.c.service.impl.EvaluationServiceImpl   : Consultando clima para distrito=CALCA, cultivo=PAPA, fecha=2027-04-15
+2026-07-26T00:35:53.970-05:00 DEBUG 30160 --- [chakra] [nio-8080-exec-6] com.chakra.client.NasaPowerClient        : Temp NASA=8.23 C, gridElev=3739.76m, realElev=2926.0m, corrected=13.519440000000001 C
+2026-07-26T00:35:53.970-05:00 DEBUG 30160 --- [chakra] [nio-8080-exec-6] c.c.service.impl.AgriculturalModelImpl   : Scores individuales - T:70.99533333333333 P:100.0 SM:100.0 A:100.0
+2026-07-26T00:35:53.970-05:00  INFO 30160 --- [chakra] [nio-8080-exec-6] c.c.service.impl.AgriculturalModelImpl   : Evaluación completada - score:91.3 risk:FAVORABLE crop:PAPA
+Hibernate: 
+    insert 
+    into
+        evaluations
+        (created_at, crop, district, elevation, planting_date, precipitation, recommendation, risk_level, score, soil_moisture, temperature) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+    returning id
+2026-07-26T00:35:54.058-05:00  INFO 30160 --- [chakra] [nio-8080-exec-5] c.c.service.impl.EvaluationServiceImpl   : Consultando clima para distrito=CALCA, cultivo=PAPA, fecha=2027-05-15
+2026-07-26T00:35:54.777-05:00 DEBUG 30160 --- [chakra] [nio-8080-exec-5] com.chakra.client.NasaPowerClient        : Temp NASA=7.86 C, gridElev=3739.76m, realElev=2926.0m, corrected=13.149440000000002 C
+2026-07-26T00:35:54.777-05:00 DEBUG 30160 --- [chakra] [nio-8080-exec-5] c.c.service.impl.AgriculturalModelImpl   : Scores individuales - T:67.91200000000002 P:25.550000000000004 SM:100.0 A:100.0
+2026-07-26T00:35:54.777-05:00  INFO 30160 --- [chakra] [nio-8080-exec-5] c.c.service.impl.AgriculturalModelImpl   : Evaluación completada - score:71.76 risk:CAUTION crop:PAPA
+Hibernate: 
+    insert 
+    into
+        evaluations
+        (created_at, crop, district, elevation, planting_date, precipitation, recommendation, risk_level, score, soil_moisture, temperature) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+    returning id
+2026-07-26T00:35:54.840-05:00  INFO 30160 --- [chakra] [nio-8080-exec-3] c.c.service.impl.EvaluationServiceImpl   : Consultando clima para distrito=CALCA, cultivo=PAPA, fecha=2027-06-15
+2026-07-26T00:35:55.228-05:00 DEBUG 30160 --- [chakra] [nio-8080-exec-3] com.chakra.client.NasaPowerClient        : Temp NASA=7.46 C, gridElev=3739.76m, realElev=2926.0m, corrected=12.74944 C
+2026-07-26T00:35:55.228-05:00 DEBUG 30160 --- [chakra] [nio-8080-exec-3] c.c.service.impl.AgriculturalModelImpl   : Scores individuales - T:64.57866666666666 P:12.775000000000002 SM:75.00000000000003 A:100.0
+2026-07-26T00:35:55.228-05:00  INFO 30160 --- [chakra] [nio-8080-exec-3] c.c.service.impl.AgriculturalModelImpl   : Evaluación completada - score:58.82 risk:CAUTION crop:PAPA
+Hibernate: 
+    insert 
+    into
+        evaluations
+        (created_at, crop, district, elevation, planting_date, precipitation, recommendation, risk_level, score, soil_moisture, temperature) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+    returning id
+2026-07-26T00:35:55.311-05:00  INFO 30160 --- [chakra] [nio-8080-exec-8] c.c.service.impl.EvaluationServiceImpl   : Consultando clima para distrito=PISAC, cultivo=PAPA, fecha=2026-08-15
+2026-07-26T00:35:56.016-05:00 DEBUG 30160 --- [chakra] [nio-8080-exec-8] com.chakra.client.NasaPowerClient        : Temp NASA=7.86 C, gridElev=3739.76m, realElev=2972.0m, corrected=12.850440000000003 C
+2026-07-26T00:35:56.016-05:00 DEBUG 30160 --- [chakra] [nio-8080-exec-8] c.c.service.impl.AgriculturalModelImpl   : Scores individuales - T:65.42033333333335 P:24.637500000000006 SM:15.0 A:100.0
+2026-07-26T00:35:56.016-05:00  INFO 30160 --- [chakra] [nio-8080-exec-8] c.c.service.impl.AgriculturalModelImpl   : Evaluación completada - score:41.04 risk:NOT_RECOMMENDED crop:PAPA
+Hibernate: 
+    insert 
+    into
+        evaluations
+        (created_at, crop, district, elevation, planting_date, precipitation, recommendation, risk_level, score, soil_moisture, temperature) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+    returning id
+2026-07-26T00:35:56.073-05:00  INFO 30160 --- [chakra] [nio-8080-exec-7] c.c.service.impl.EvaluationServiceImpl   : Consultando clima para distrito=PISAC, cultivo=PAPA, fecha=2026-09-15
+2026-07-26T00:35:56.815-05:00 DEBUG 30160 --- [chakra] [nio-8080-exec-7] com.chakra.client.NasaPowerClient        : Temp NASA=8.54 C, gridElev=3739.76m, realElev=2972.0m, corrected=13.53044 C
+2026-07-26T00:35:56.815-05:00 DEBUG 30160 --- [chakra] [nio-8080-exec-7] c.c.service.impl.AgriculturalModelImpl   : Scores individuales - T:71.087 P:54.75000000000001 SM:0.0 A:100.0
+2026-07-26T00:35:56.815-05:00  INFO 30160 --- [chakra] [nio-8080-exec-7] c.c.service.impl.AgriculturalModelImpl   : Evaluación completada - score:45.01 risk:NOT_RECOMMENDED crop:PAPA
+Hibernate: 
+    insert 
+    into
+        evaluations
+        (created_at, crop, district, elevation, planting_date, precipitation, recommendation, risk_level, score, soil_moisture, temperature) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+    returning id
+2026-07-26T00:35:56.859-05:00  INFO 30160 --- [chakra] [io-8080-exec-10] c.c.service.impl.EvaluationServiceImpl   : Consultando clima para distrito=PISAC, cultivo=PAPA, fecha=2026-10-15
+2026-07-26T00:35:57.291-05:00 DEBUG 30160 --- [chakra] [io-8080-exec-10] com.chakra.client.NasaPowerClient        : Temp NASA=8.9 C, gridElev=3739.76m, realElev=2972.0m, corrected=13.890440000000002 C
+2026-07-26T00:35:57.291-05:00 DEBUG 30160 --- [chakra] [io-8080-exec-10] c.c.service.impl.AgriculturalModelImpl   : Scores individuales - T:74.08700000000002 P:100.0 SM:30.0 A:100.0
+2026-07-26T00:35:57.291-05:00  INFO 30160 --- [chakra] [io-8080-exec-10] c.c.service.impl.AgriculturalModelImpl   : Evaluación completada - score:67.73 risk:CAUTION crop:PAPA
+Hibernate: 
+    insert 
+    into
+        evaluations
+        (created_at, crop, district, elevation, planting_date, precipitation, recommendation, risk_level, score, soil_moisture, temperature) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+    returning id
+2026-07-26T00:35:57.376-05:00  INFO 30160 --- [chakra] [nio-8080-exec-9] c.c.service.impl.EvaluationServiceImpl   : Consultando clima para distrito=PISAC, cultivo=PAPA, fecha=2026-11-15
+2026-07-26T00:35:57.766-05:00 DEBUG 30160 --- [chakra] [nio-8080-exec-9] com.chakra.client.NasaPowerClient        : Temp NASA=9.14 C, gridElev=3739.76m, realElev=2972.0m, corrected=14.130440000000002 C
+2026-07-26T00:35:57.766-05:00 DEBUG 30160 --- [chakra] [nio-8080-exec-9] c.c.service.impl.AgriculturalModelImpl   : Scores individuales - T:76.08700000000002 P:100.0 SM:60.0 A:100.0
+2026-07-26T00:35:57.766-05:00  INFO 30160 --- [chakra] [nio-8080-exec-9] c.c.service.impl.AgriculturalModelImpl   : Evaluación completada - score:78.83 risk:CAUTION crop:PAPA
+Hibernate: 
+    insert 
+    into
+        evaluations
+        (created_at, crop, district, elevation, planting_date, precipitation, recommendation, risk_level, score, soil_moisture, temperature) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+    returning id
+2026-07-26T00:35:57.830-05:00  INFO 30160 --- [chakra] [nio-8080-exec-1] c.c.service.impl.EvaluationServiceImpl   : Consultando clima para distrito=PISAC, cultivo=PAPA, fecha=2026-12-15
+2026-07-26T00:35:58.555-05:00 DEBUG 30160 --- [chakra] [nio-8080-exec-1] com.chakra.client.NasaPowerClient        : Temp NASA=8.77 C, gridElev=3739.76m, realElev=2972.0m, corrected=13.760440000000001 C
+2026-07-26T00:35:58.555-05:00 DEBUG 30160 --- [chakra] [nio-8080-exec-1] c.c.service.impl.AgriculturalModelImpl   : Scores individuales - T:73.00366666666667 P:65.55833333333332 SM:100.0 A:100.0
+2026-07-26T00:35:58.555-05:00  INFO 30160 --- [chakra] [nio-8080-exec-1] c.c.service.impl.AgriculturalModelImpl   : Evaluación completada - score:83.29 risk:FAVORABLE crop:PAPA
+Hibernate: 
+    insert 
+    into
+        evaluations
+        (created_at, crop, district, elevation, planting_date, precipitation, recommendation, risk_level, score, soil_moisture, temperature) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+    returning id
+2026-07-26T00:35:58.636-05:00  INFO 30160 --- [chakra] [nio-8080-exec-2] c.c.service.impl.EvaluationServiceImpl   : Consultando clima para distrito=PISAC, cultivo=PAPA, fecha=2027-01-15
+2026-07-26T00:35:59.356-05:00 DEBUG 30160 --- [chakra] [nio-8080-exec-2] com.chakra.client.NasaPowerClient        : Temp NASA=8.52 C, gridElev=3739.76m, realElev=2972.0m, corrected=13.510440000000001 C
+2026-07-26T00:35:59.356-05:00 DEBUG 30160 --- [chakra] [nio-8080-exec-2] c.c.service.impl.AgriculturalModelImpl   : Scores individuales - T:70.92033333333335 P:73.1625 SM:100.0 A:100.0
+2026-07-26T00:35:59.356-05:00  INFO 30160 --- [chakra] [nio-8080-exec-2] c.c.service.impl.AgriculturalModelImpl   : Evaluación completada - score:84.57 risk:FAVORABLE crop:PAPA
+Hibernate: 
+    insert 
+    into
+        evaluations
+        (created_at, crop, district, elevation, planting_date, precipitation, recommendation, risk_level, score, soil_moisture, temperature) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+    returning id
+2026-07-26T00:35:59.439-05:00  INFO 30160 --- [chakra] [nio-8080-exec-4] c.c.service.impl.EvaluationServiceImpl   : Consultando clima para distrito=PISAC, cultivo=PAPA, fecha=2027-02-15
+2026-07-26T00:36:00.139-05:00 DEBUG 30160 --- [chakra] [nio-8080-exec-4] com.chakra.client.NasaPowerClient        : Temp NASA=8.48 C, gridElev=3739.76m, realElev=2972.0m, corrected=13.470440000000002 C
+2026-07-26T00:36:00.139-05:00 DEBUG 30160 --- [chakra] [nio-8080-exec-4] c.c.service.impl.AgriculturalModelImpl   : Scores individuales - T:70.58700000000002 P:63.429166666666646 SM:100.0 A:100.0
+2026-07-26T00:36:00.139-05:00  INFO 30160 --- [chakra] [nio-8080-exec-4] c.c.service.impl.AgriculturalModelImpl   : Evaluación completada - score:82.03 risk:FAVORABLE crop:PAPA
+Hibernate: 
+    insert 
+    into
+        evaluations
+        (created_at, crop, district, elevation, planting_date, precipitation, recommendation, risk_level, score, soil_moisture, temperature) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+    returning id
+2026-07-26T00:36:00.211-05:00  INFO 30160 --- [chakra] [nio-8080-exec-6] c.c.service.impl.EvaluationServiceImpl   : Consultando clima para distrito=PISAC, cultivo=PAPA, fecha=2027-03-15
+2026-07-26T00:36:00.912-05:00 DEBUG 30160 --- [chakra] [nio-8080-exec-6] com.chakra.client.NasaPowerClient        : Temp NASA=8.33 C, gridElev=3739.76m, realElev=2972.0m, corrected=13.320440000000001 C
+2026-07-26T00:36:00.912-05:00 DEBUG 30160 --- [chakra] [nio-8080-exec-6] c.c.service.impl.AgriculturalModelImpl   : Scores individuales - T:69.337 P:100.0 SM:100.0 A:100.0
+2026-07-26T00:36:00.912-05:00  INFO 30160 --- [chakra] [nio-8080-exec-6] c.c.service.impl.AgriculturalModelImpl   : Evaluación completada - score:90.8 risk:FAVORABLE crop:PAPA
+Hibernate: 
+    insert 
+    into
+        evaluations
+        (created_at, crop, district, elevation, planting_date, precipitation, recommendation, risk_level, score, soil_moisture, temperature) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+    returning id
+2026-07-26T00:36:01.000-05:00  INFO 30160 --- [chakra] [nio-8080-exec-5] c.c.service.impl.EvaluationServiceImpl   : Consultando clima para distrito=PISAC, cultivo=PAPA, fecha=2027-04-15
+2026-07-26T00:36:01.621-05:00 DEBUG 30160 --- [chakra] [nio-8080-exec-5] com.chakra.client.NasaPowerClient        : Temp NASA=8.23 C, gridElev=3739.76m, realElev=2972.0m, corrected=13.220440000000002 C
+2026-07-26T00:36:01.621-05:00 DEBUG 30160 --- [chakra] [nio-8080-exec-5] c.c.service.impl.AgriculturalModelImpl   : Scores individuales - T:68.50366666666669 P:100.0 SM:100.0 A:100.0
+2026-07-26T00:36:01.621-05:00  INFO 30160 --- [chakra] [nio-8080-exec-5] c.c.service.impl.AgriculturalModelImpl   : Evaluación completada - score:90.55 risk:FAVORABLE crop:PAPA
+Hibernate: 
+    insert 
+    into
+        evaluations
+        (created_at, crop, district, elevation, planting_date, precipitation, recommendation, risk_level, score, soil_moisture, temperature) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+    returning id
+2026-07-26T00:36:01.698-05:00  INFO 30160 --- [chakra] [nio-8080-exec-3] c.c.service.impl.EvaluationServiceImpl   : Consultando clima para distrito=PISAC, cultivo=PAPA, fecha=2027-05-15
+2026-07-26T00:36:02.447-05:00 DEBUG 30160 --- [chakra] [nio-8080-exec-3] com.chakra.client.NasaPowerClient        : Temp NASA=7.86 C, gridElev=3739.76m, realElev=2972.0m, corrected=12.850440000000003 C
+2026-07-26T00:36:02.447-05:00 DEBUG 30160 --- [chakra] [nio-8080-exec-3] c.c.service.impl.AgriculturalModelImpl   : Scores individuales - T:65.42033333333335 P:25.550000000000004 SM:100.0 A:100.0
+2026-07-26T00:36:02.447-05:00  INFO 30160 --- [chakra] [nio-8080-exec-3] c.c.service.impl.AgriculturalModelImpl   : Evaluación completada - score:71.01 risk:CAUTION crop:PAPA
+Hibernate: 
+    insert 
+    into
+        evaluations
+        (created_at, crop, district, elevation, planting_date, precipitation, recommendation, risk_level, score, soil_moisture, temperature) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+    returning id
+2026-07-26T00:36:02.512-05:00  INFO 30160 --- [chakra] [nio-8080-exec-8] c.c.service.impl.EvaluationServiceImpl   : Consultando clima para distrito=PISAC, cultivo=PAPA, fecha=2027-06-15
+2026-07-26T00:36:03.268-05:00 DEBUG 30160 --- [chakra] [nio-8080-exec-8] com.chakra.client.NasaPowerClient        : Temp NASA=7.46 C, gridElev=3739.76m, realElev=2972.0m, corrected=12.45044 C
+2026-07-26T00:36:03.268-05:00 DEBUG 30160 --- [chakra] [nio-8080-exec-8] c.c.service.impl.AgriculturalModelImpl   : Scores individuales - T:62.08700000000001 P:12.775000000000002 SM:75.00000000000003 A:100.0
+2026-07-26T00:36:03.268-05:00  INFO 30160 --- [chakra] [nio-8080-exec-8] c.c.service.impl.AgriculturalModelImpl   : Evaluación completada - score:58.07 risk:CAUTION crop:PAPA
+Hibernate: 
+    insert 
+    into
+        evaluations
+        (created_at, crop, district, elevation, planting_date, precipitation, recommendation, risk_level, score, soil_moisture, temperature) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+    returning id
+2026-07-26T00:36:03.353-05:00  INFO 30160 --- [chakra] [nio-8080-exec-7] c.c.service.impl.EvaluationServiceImpl   : Consultando clima para distrito=ANTA, cultivo=PAPA, fecha=2026-08-15
+2026-07-26T00:36:03.746-05:00 DEBUG 30160 --- [chakra] [nio-8080-exec-7] com.chakra.client.NasaPowerClient        : Temp NASA=7.86 C, gridElev=3739.76m, realElev=3400.0m, corrected=10.068440000000002 C
+2026-07-26T00:36:03.747-05:00 DEBUG 30160 --- [chakra] [nio-8080-exec-7] c.c.service.impl.AgriculturalModelImpl   : Scores individuales - T:42.23700000000002 P:24.637500000000006 SM:15.0 A:100.0
+2026-07-26T00:36:03.747-05:00  INFO 30160 --- [chakra] [nio-8080-exec-7] c.c.service.impl.AgriculturalModelImpl   : Evaluación completada - score:34.08 risk:NOT_RECOMMENDED crop:PAPA
+Hibernate: 
+    insert 
+    into
+        evaluations
+        (created_at, crop, district, elevation, planting_date, precipitation, recommendation, risk_level, score, soil_moisture, temperature) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+    returning id
+2026-07-26T00:36:03.796-05:00  INFO 30160 --- [chakra] [io-8080-exec-10] c.c.service.impl.EvaluationServiceImpl   : Consultando clima para distrito=ANTA, cultivo=PAPA, fecha=2026-09-15
+2026-07-26T00:36:04.514-05:00 DEBUG 30160 --- [chakra] [io-8080-exec-10] com.chakra.client.NasaPowerClient        : Temp NASA=8.54 C, gridElev=3739.76m, realElev=3400.0m, corrected=10.74844 C
+2026-07-26T00:36:04.514-05:00 DEBUG 30160 --- [chakra] [io-8080-exec-10] c.c.service.impl.AgriculturalModelImpl   : Scores individuales - T:47.90366666666667 P:54.75000000000001 SM:0.0 A:100.0
+2026-07-26T00:36:04.514-05:00  INFO 30160 --- [chakra] [io-8080-exec-10] c.c.service.impl.AgriculturalModelImpl   : Evaluación completada - score:38.06 risk:NOT_RECOMMENDED crop:PAPA
+Hibernate: 
+    insert 
+    into
+        evaluations
+        (created_at, crop, district, elevation, planting_date, precipitation, recommendation, risk_level, score, soil_moisture, temperature) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+    returning id
+2026-07-26T00:36:04.610-05:00  INFO 30160 --- [chakra] [nio-8080-exec-9] c.c.service.impl.EvaluationServiceImpl   : Consultando clima para distrito=ANTA, cultivo=PAPA, fecha=2026-10-15
+2026-07-26T00:36:04.994-05:00 DEBUG 30160 --- [chakra] [nio-8080-exec-9] com.chakra.client.NasaPowerClient        : Temp NASA=8.9 C, gridElev=3739.76m, realElev=3400.0m, corrected=11.108440000000002 C
+2026-07-26T00:36:04.995-05:00 DEBUG 30160 --- [chakra] [nio-8080-exec-9] c.c.service.impl.AgriculturalModelImpl   : Scores individuales - T:50.90366666666668 P:100.0 SM:30.0 A:100.0
+2026-07-26T00:36:04.995-05:00  INFO 30160 --- [chakra] [nio-8080-exec-9] c.c.service.impl.AgriculturalModelImpl   : Evaluación completada - score:60.77 risk:CAUTION crop:PAPA
+Hibernate: 
+    insert 
+    into
+        evaluations
+        (created_at, crop, district, elevation, planting_date, precipitation, recommendation, risk_level, score, soil_moisture, temperature) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+    returning id
+2026-07-26T00:36:05.054-05:00  INFO 30160 --- [chakra] [nio-8080-exec-1] c.c.service.impl.EvaluationServiceImpl   : Consultando clima para distrito=ANTA, cultivo=PAPA, fecha=2026-11-15
+2026-07-26T00:36:05.767-05:00 DEBUG 30160 --- [chakra] [nio-8080-exec-1] com.chakra.client.NasaPowerClient        : Temp NASA=9.14 C, gridElev=3739.76m, realElev=3400.0m, corrected=11.348440000000002 C
+2026-07-26T00:36:05.767-05:00 DEBUG 30160 --- [chakra] [nio-8080-exec-1] c.c.service.impl.AgriculturalModelImpl   : Scores individuales - T:52.90366666666668 P:100.0 SM:60.0 A:100.0
+2026-07-26T00:36:05.767-05:00  INFO 30160 --- [chakra] [nio-8080-exec-1] c.c.service.impl.AgriculturalModelImpl   : Evaluación completada - score:71.87 risk:CAUTION crop:PAPA
+Hibernate: 
+    insert 
+    into
+        evaluations
+        (created_at, crop, district, elevation, planting_date, precipitation, recommendation, risk_level, score, soil_moisture, temperature) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+    returning id
+2026-07-26T00:36:05.947-05:00  INFO 30160 --- [chakra] [nio-8080-exec-2] c.c.service.impl.EvaluationServiceImpl   : Consultando clima para distrito=ANTA, cultivo=PAPA, fecha=2026-12-15
+2026-07-26T00:36:06.649-05:00 DEBUG 30160 --- [chakra] [nio-8080-exec-2] com.chakra.client.NasaPowerClient        : Temp NASA=8.77 C, gridElev=3739.76m, realElev=3400.0m, corrected=10.97844 C
+2026-07-26T00:36:06.649-05:00 DEBUG 30160 --- [chakra] [nio-8080-exec-2] c.c.service.impl.AgriculturalModelImpl   : Scores individuales - T:49.82033333333334 P:65.55833333333332 SM:100.0 A:100.0
+2026-07-26T00:36:06.649-05:00  INFO 30160 --- [chakra] [nio-8080-exec-2] c.c.service.impl.AgriculturalModelImpl   : Evaluación completada - score:76.34 risk:CAUTION crop:PAPA
+Hibernate: 
+    insert 
+    into
+        evaluations
+        (created_at, crop, district, elevation, planting_date, precipitation, recommendation, risk_level, score, soil_moisture, temperature) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+    returning id
+2026-07-26T00:36:06.916-05:00  INFO 30160 --- [chakra] [nio-8080-exec-4] c.c.service.impl.EvaluationServiceImpl   : Consultando clima para distrito=ANTA, cultivo=PAPA, fecha=2027-01-15
+2026-07-26T00:36:07.626-05:00 DEBUG 30160 --- [chakra] [nio-8080-exec-4] com.chakra.client.NasaPowerClient        : Temp NASA=8.52 C, gridElev=3739.76m, realElev=3400.0m, corrected=10.72844 C
+2026-07-26T00:36:07.626-05:00 DEBUG 30160 --- [chakra] [nio-8080-exec-4] c.c.service.impl.AgriculturalModelImpl   : Scores individuales - T:47.737 P:73.1625 SM:100.0 A:100.0
+2026-07-26T00:36:07.626-05:00  INFO 30160 --- [chakra] [nio-8080-exec-4] c.c.service.impl.AgriculturalModelImpl   : Evaluación completada - score:77.61 risk:CAUTION crop:PAPA
+Hibernate: 
+    insert 
+    into
+        evaluations
+        (created_at, crop, district, elevation, planting_date, precipitation, recommendation, risk_level, score, soil_moisture, temperature) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+    returning id
+2026-07-26T00:36:07.732-05:00  INFO 30160 --- [chakra] [nio-8080-exec-6] c.c.service.impl.EvaluationServiceImpl   : Consultando clima para distrito=ANTA, cultivo=PAPA, fecha=2027-02-15
+2026-07-26T00:36:08.359-05:00 DEBUG 30160 --- [chakra] [nio-8080-exec-6] com.chakra.client.NasaPowerClient        : Temp NASA=8.48 C, gridElev=3739.76m, realElev=3400.0m, corrected=10.688440000000002 C
+2026-07-26T00:36:08.359-05:00 DEBUG 30160 --- [chakra] [nio-8080-exec-6] c.c.service.impl.AgriculturalModelImpl   : Scores individuales - T:47.40366666666668 P:63.429166666666646 SM:100.0 A:100.0
+2026-07-26T00:36:08.359-05:00  INFO 30160 --- [chakra] [nio-8080-exec-6] c.c.service.impl.AgriculturalModelImpl   : Evaluación completada - score:75.08 risk:CAUTION crop:PAPA
+Hibernate: 
+    insert 
+    into
+        evaluations
+        (created_at, crop, district, elevation, planting_date, precipitation, recommendation, risk_level, score, soil_moisture, temperature) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+    returning id
+2026-07-26T00:36:08.481-05:00  INFO 30160 --- [chakra] [nio-8080-exec-5] c.c.service.impl.EvaluationServiceImpl   : Consultando clima para distrito=ANTA, cultivo=PAPA, fecha=2027-03-15
+2026-07-26T00:36:08.948-05:00 DEBUG 30160 --- [chakra] [nio-8080-exec-5] com.chakra.client.NasaPowerClient        : Temp NASA=8.33 C, gridElev=3739.76m, realElev=3400.0m, corrected=10.538440000000001 C
+2026-07-26T00:36:08.948-05:00 DEBUG 30160 --- [chakra] [nio-8080-exec-5] c.c.service.impl.AgriculturalModelImpl   : Scores individuales - T:46.15366666666668 P:100.0 SM:100.0 A:100.0
+2026-07-26T00:36:08.948-05:00  INFO 30160 --- [chakra] [nio-8080-exec-5] c.c.service.impl.AgriculturalModelImpl   : Evaluación completada - score:83.85 risk:FAVORABLE crop:PAPA
+Hibernate: 
+    insert 
+    into
+        evaluations
+        (created_at, crop, district, elevation, planting_date, precipitation, recommendation, risk_level, score, soil_moisture, temperature) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+    returning id
+2026-07-26T00:36:09.052-05:00  INFO 30160 --- [chakra] [nio-8080-exec-3] c.c.service.impl.EvaluationServiceImpl   : Consultando clima para distrito=ANTA, cultivo=PAPA, fecha=2027-04-15
+2026-07-26T00:36:09.616-05:00 DEBUG 30160 --- [chakra] [nio-8080-exec-3] com.chakra.client.NasaPowerClient        : Temp NASA=8.23 C, gridElev=3739.76m, realElev=3400.0m, corrected=10.438440000000002 C
+2026-07-26T00:36:09.616-05:00 DEBUG 30160 --- [chakra] [nio-8080-exec-3] c.c.service.impl.AgriculturalModelImpl   : Scores individuales - T:45.320333333333345 P:100.0 SM:100.0 A:100.0
+2026-07-26T00:36:09.616-05:00  INFO 30160 --- [chakra] [nio-8080-exec-3] c.c.service.impl.AgriculturalModelImpl   : Evaluación completada - score:83.6 risk:FAVORABLE crop:PAPA
+Hibernate: 
+    insert 
+    into
+        evaluations
+        (created_at, crop, district, elevation, planting_date, precipitation, recommendation, risk_level, score, soil_moisture, temperature) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+    returning id
+2026-07-26T00:36:09.737-05:00  INFO 30160 --- [chakra] [nio-8080-exec-8] c.c.service.impl.EvaluationServiceImpl   : Consultando clima para distrito=ANTA, cultivo=PAPA, fecha=2027-05-15
+2026-07-26T00:36:10.136-05:00 DEBUG 30160 --- [chakra] [nio-8080-exec-8] com.chakra.client.NasaPowerClient        : Temp NASA=7.86 C, gridElev=3739.76m, realElev=3400.0m, corrected=10.068440000000002 C
+2026-07-26T00:36:10.136-05:00 DEBUG 30160 --- [chakra] [nio-8080-exec-8] c.c.service.impl.AgriculturalModelImpl   : Scores individuales - T:42.23700000000002 P:25.550000000000004 SM:100.0 A:100.0
+2026-07-26T00:36:10.136-05:00  INFO 30160 --- [chakra] [nio-8080-exec-8] c.c.service.impl.AgriculturalModelImpl   : Evaluación completada - score:64.06 risk:CAUTION crop:PAPA
+Hibernate: 
+    insert 
+    into
+        evaluations
+        (created_at, crop, district, elevation, planting_date, precipitation, recommendation, risk_level, score, soil_moisture, temperature) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+    returning id
+2026-07-26T00:36:10.269-05:00  INFO 30160 --- [chakra] [nio-8080-exec-7] c.c.service.impl.EvaluationServiceImpl   : Consultando clima para distrito=ANTA, cultivo=PAPA, fecha=2027-06-15
+2026-07-26T00:36:10.669-05:00 DEBUG 30160 --- [chakra] [nio-8080-exec-7] com.chakra.client.NasaPowerClient        : Temp NASA=7.46 C, gridElev=3739.76m, realElev=3400.0m, corrected=9.66844 C
+2026-07-26T00:36:10.669-05:00 DEBUG 30160 --- [chakra] [nio-8080-exec-7] c.c.service.impl.AgriculturalModelImpl   : Scores individuales - T:38.90366666666667 P:12.775000000000002 SM:75.00000000000003 A:100.0
+2026-07-26T00:36:10.669-05:00  INFO 30160 --- [chakra] [nio-8080-exec-7] c.c.service.impl.AgriculturalModelImpl   : Evaluación completada - score:51.11 risk:CAUTION crop:PAPA
+Hibernate: 
+    insert 
+    into
+        evaluations
+        (created_at, crop, district, elevation, planting_date, precipitation, recommendation, risk_level, score, soil_moisture, temperature) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+    returning id
+2026-07-26T00:36:10.773-05:00  INFO 30160 --- [chakra] [io-8080-exec-10] c.c.service.impl.EvaluationServiceImpl   : Consultando clima para distrito=LIMATAMBO, cultivo=PAPA, fecha=2026-08-15
+2026-07-26T00:36:11.495-05:00 DEBUG 30160 --- [chakra] [io-8080-exec-10] com.chakra.client.NasaPowerClient        : Temp NASA=8.34 C, gridElev=3724.94m, realElev=2711.0m, corrected=14.93061 C
+2026-07-26T00:36:11.496-05:00 DEBUG 30160 --- [chakra] [io-8080-exec-10] c.c.service.impl.AgriculturalModelImpl   : Scores individuales - T:82.75508333333333 P:31.02500000000001 SM:0.0 A:100.0
+2026-07-26T00:36:11.496-05:00  INFO 30160 --- [chakra] [io-8080-exec-10] c.c.service.impl.AgriculturalModelImpl   : Evaluación completada - score:42.58 risk:NOT_RECOMMENDED crop:PAPA
+Hibernate: 
+    insert 
+    into
+        evaluations
+        (created_at, crop, district, elevation, planting_date, precipitation, recommendation, risk_level, score, soil_moisture, temperature) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+    returning id
+2026-07-26T00:36:11.638-05:00  INFO 30160 --- [chakra] [nio-8080-exec-9] c.c.service.impl.EvaluationServiceImpl   : Consultando clima para distrito=LIMATAMBO, cultivo=PAPA, fecha=2026-09-15
+2026-07-26T00:36:12.590-05:00 DEBUG 30160 --- [chakra] [nio-8080-exec-9] com.chakra.client.NasaPowerClient        : Temp NASA=8.92 C, gridElev=3724.94m, realElev=2711.0m, corrected=15.51061 C
+2026-07-26T00:36:12.590-05:00 DEBUG 30160 --- [chakra] [nio-8080-exec-9] c.c.service.impl.AgriculturalModelImpl   : Scores individuales - T:87.58841666666666 P:68.4375 SM:0.0 A:100.0
+2026-07-26T00:36:12.590-05:00  INFO 30160 --- [chakra] [nio-8080-exec-9] c.c.service.impl.AgriculturalModelImpl   : Evaluación completada - score:53.39 risk:CAUTION crop:PAPA
+Hibernate: 
+    insert 
+    into
+        evaluations
+        (created_at, crop, district, elevation, planting_date, precipitation, recommendation, risk_level, score, soil_moisture, temperature) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+    returning id
+2026-07-26T00:36:12.659-05:00  INFO 30160 --- [chakra] [nio-8080-exec-1] c.c.service.impl.EvaluationServiceImpl   : Consultando clima para distrito=LIMATAMBO, cultivo=PAPA, fecha=2026-10-15
+2026-07-26T00:36:13.405-05:00 DEBUG 30160 --- [chakra] [nio-8080-exec-1] com.chakra.client.NasaPowerClient        : Temp NASA=9.15 C, gridElev=3724.94m, realElev=2711.0m, corrected=15.74061 C
+2026-07-26T00:36:13.406-05:00 DEBUG 30160 --- [chakra] [nio-8080-exec-1] c.c.service.impl.AgriculturalModelImpl   : Scores individuales - T:89.50508333333333 P:100.0 SM:0.0 A:100.0
+2026-07-26T00:36:13.406-05:00  INFO 30160 --- [chakra] [nio-8080-exec-1] c.c.service.impl.AgriculturalModelImpl   : Evaluación completada - score:61.85 risk:CAUTION crop:PAPA
+Hibernate: 
+    insert 
+    into
+        evaluations
+        (created_at, crop, district, elevation, planting_date, precipitation, recommendation, risk_level, score, soil_moisture, temperature) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+    returning id
+2026-07-26T00:36:13.445-05:00  INFO 30160 --- [chakra] [nio-8080-exec-2] c.c.service.impl.EvaluationServiceImpl   : Consultando clima para distrito=LIMATAMBO, cultivo=PAPA, fecha=2026-11-15
+2026-07-26T00:36:13.917-05:00 DEBUG 30160 --- [chakra] [nio-8080-exec-2] com.chakra.client.NasaPowerClient        : Temp NASA=9.34 C, gridElev=3724.94m, realElev=2711.0m, corrected=15.93061 C
+2026-07-26T00:36:13.919-05:00 DEBUG 30160 --- [chakra] [nio-8080-exec-2] c.c.service.impl.AgriculturalModelImpl   : Scores individuales - T:91.08841666666666 P:100.0 SM:30.0 A:100.0
+2026-07-26T00:36:13.919-05:00  INFO 30160 --- [chakra] [nio-8080-exec-2] c.c.service.impl.AgriculturalModelImpl   : Evaluación completada - score:72.83 risk:CAUTION crop:PAPA
+Hibernate: 
+    insert 
+    into
+        evaluations
+        (created_at, crop, district, elevation, planting_date, precipitation, recommendation, risk_level, score, soil_moisture, temperature) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+    returning id
+2026-07-26T00:36:13.961-05:00  INFO 30160 --- [chakra] [nio-8080-exec-4] c.c.service.impl.EvaluationServiceImpl   : Consultando clima para distrito=LIMATAMBO, cultivo=PAPA, fecha=2026-12-15
+2026-07-26T00:36:14.737-05:00 DEBUG 30160 --- [chakra] [nio-8080-exec-4] com.chakra.client.NasaPowerClient        : Temp NASA=8.7 C, gridElev=3724.94m, realElev=2711.0m, corrected=15.29061 C
+2026-07-26T00:36:14.738-05:00 DEBUG 30160 --- [chakra] [nio-8080-exec-4] c.c.service.impl.AgriculturalModelImpl   : Scores individuales - T:85.75508333333333 P:64.64583333333333 SM:80.00000000000003 A:100.0
+2026-07-26T00:36:14.738-05:00  INFO 30160 --- [chakra] [nio-8080-exec-4] c.c.service.impl.AgriculturalModelImpl   : Evaluación completada - score:79.89 risk:CAUTION crop:PAPA
+Hibernate: 
+    insert 
+    into
+        evaluations
+        (created_at, crop, district, elevation, planting_date, precipitation, recommendation, risk_level, score, soil_moisture, temperature) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+    returning id
+2026-07-26T00:36:14.876-05:00  INFO 30160 --- [chakra] [nio-8080-exec-6] c.c.service.impl.EvaluationServiceImpl   : Consultando clima para distrito=LIMATAMBO, cultivo=PAPA, fecha=2027-01-15
+2026-07-26T00:36:15.349-05:00 DEBUG 30160 --- [chakra] [nio-8080-exec-6] com.chakra.client.NasaPowerClient        : Temp NASA=8.55 C, gridElev=3724.94m, realElev=2711.0m, corrected=15.14061 C
+2026-07-26T00:36:15.349-05:00 DEBUG 30160 --- [chakra] [nio-8080-exec-6] c.c.service.impl.AgriculturalModelImpl   : Scores individuales - T:84.50508333333333 P:66.77499999999998 SM:100.0 A:100.0
+2026-07-26T00:36:15.349-05:00  INFO 30160 --- [chakra] [nio-8080-exec-6] c.c.service.impl.AgriculturalModelImpl   : Evaluación completada - score:87.05 risk:FAVORABLE crop:PAPA
+Hibernate: 
+    insert 
+    into
+        evaluations
+        (created_at, crop, district, elevation, planting_date, precipitation, recommendation, risk_level, score, soil_moisture, temperature) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+    returning id
+2026-07-26T00:36:15.391-05:00  INFO 30160 --- [chakra] [nio-8080-exec-5] c.c.service.impl.EvaluationServiceImpl   : Consultando clima para distrito=LIMATAMBO, cultivo=PAPA, fecha=2027-02-15
+2026-07-26T00:36:15.786-05:00 DEBUG 30160 --- [chakra] [nio-8080-exec-5] com.chakra.client.NasaPowerClient        : Temp NASA=8.49 C, gridElev=3724.94m, realElev=2711.0m, corrected=15.08061 C
+2026-07-26T00:36:15.786-05:00 DEBUG 30160 --- [chakra] [nio-8080-exec-5] c.c.service.impl.AgriculturalModelImpl   : Scores individuales - T:84.00508333333333 P:57.04166666666666 SM:100.0 A:100.0
+2026-07-26T00:36:15.786-05:00  INFO 30160 --- [chakra] [nio-8080-exec-5] c.c.service.impl.AgriculturalModelImpl   : Evaluación completada - score:84.46 risk:FAVORABLE crop:PAPA
+Hibernate: 
+    insert 
+    into
+        evaluations
+        (created_at, crop, district, elevation, planting_date, precipitation, recommendation, risk_level, score, soil_moisture, temperature) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+    returning id
+2026-07-26T00:36:15.832-05:00  INFO 30160 --- [chakra] [nio-8080-exec-3] c.c.service.impl.EvaluationServiceImpl   : Consultando clima para distrito=LIMATAMBO, cultivo=PAPA, fecha=2027-03-15
+2026-07-26T00:36:16.210-05:00 DEBUG 30160 --- [chakra] [nio-8080-exec-3] com.chakra.client.NasaPowerClient        : Temp NASA=8.39 C, gridElev=3724.94m, realElev=2711.0m, corrected=14.98061 C
+2026-07-26T00:36:16.210-05:00 DEBUG 30160 --- [chakra] [nio-8080-exec-3] c.c.service.impl.AgriculturalModelImpl   : Scores individuales - T:83.17175 P:99.625 SM:100.0 A:100.0
+2026-07-26T00:36:16.210-05:00  INFO 30160 --- [chakra] [nio-8080-exec-3] c.c.service.impl.AgriculturalModelImpl   : Evaluación completada - score:94.86 risk:FAVORABLE crop:PAPA
+Hibernate: 
+    insert 
+    into
+        evaluations
+        (created_at, crop, district, elevation, planting_date, precipitation, recommendation, risk_level, score, soil_moisture, temperature) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+    returning id
+2026-07-26T00:36:16.261-05:00  INFO 30160 --- [chakra] [nio-8080-exec-8] c.c.service.impl.EvaluationServiceImpl   : Consultando clima para distrito=LIMATAMBO, cultivo=PAPA, fecha=2027-04-15
+2026-07-26T00:36:16.658-05:00 DEBUG 30160 --- [chakra] [nio-8080-exec-8] com.chakra.client.NasaPowerClient        : Temp NASA=8.41 C, gridElev=3724.94m, realElev=2711.0m, corrected=15.00061 C
+2026-07-26T00:36:16.659-05:00 DEBUG 30160 --- [chakra] [nio-8080-exec-8] c.c.service.impl.AgriculturalModelImpl   : Scores individuales - T:83.33841666666667 P:100.0 SM:100.0 A:100.0
+2026-07-26T00:36:16.659-05:00  INFO 30160 --- [chakra] [nio-8080-exec-8] c.c.service.impl.AgriculturalModelImpl   : Evaluación completada - score:95.0 risk:FAVORABLE crop:PAPA
+Hibernate: 
+    insert 
+    into
+        evaluations
+        (created_at, crop, district, elevation, planting_date, precipitation, recommendation, risk_level, score, soil_moisture, temperature) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+    returning id
+2026-07-26T00:36:16.726-05:00  INFO 30160 --- [chakra] [nio-8080-exec-7] c.c.service.impl.EvaluationServiceImpl   : Consultando clima para distrito=LIMATAMBO, cultivo=PAPA, fecha=2027-05-15
+2026-07-26T00:36:17.441-05:00 DEBUG 30160 --- [chakra] [nio-8080-exec-7] com.chakra.client.NasaPowerClient        : Temp NASA=8.07 C, gridElev=3724.94m, realElev=2711.0m, corrected=14.66061 C
+2026-07-26T00:36:17.441-05:00 DEBUG 30160 --- [chakra] [nio-8080-exec-7] c.c.service.impl.AgriculturalModelImpl   : Scores individuales - T:80.50508333333333 P:34.675000000000004 SM:95.0 A:100.0
+2026-07-26T00:36:17.441-05:00  INFO 30160 --- [chakra] [nio-8080-exec-7] c.c.service.impl.AgriculturalModelImpl   : Evaluación completada - score:76.07 risk:CAUTION crop:PAPA
+Hibernate: 
+    insert 
+    into
+        evaluations
+        (created_at, crop, district, elevation, planting_date, precipitation, recommendation, risk_level, score, soil_moisture, temperature) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+    returning id
+2026-07-26T00:36:17.510-05:00  INFO 30160 --- [chakra] [io-8080-exec-10] c.c.service.impl.EvaluationServiceImpl   : Consultando clima para distrito=LIMATAMBO, cultivo=PAPA, fecha=2027-06-15
+2026-07-26T00:36:18.227-05:00 DEBUG 30160 --- [chakra] [io-8080-exec-10] com.chakra.client.NasaPowerClient        : Temp NASA=7.76 C, gridElev=3724.94m, realElev=2711.0m, corrected=14.35061 C
+2026-07-26T00:36:18.227-05:00 DEBUG 30160 --- [chakra] [io-8080-exec-10] c.c.service.impl.AgriculturalModelImpl   : Scores individuales - T:77.92174999999999 P:12.775000000000002 SM:45.0 A:100.0
+2026-07-26T00:36:18.227-05:00  INFO 30160 --- [chakra] [io-8080-exec-10] c.c.service.impl.AgriculturalModelImpl   : Evaluación completada - score:52.32 risk:CAUTION crop:PAPA
+Hibernate: 
+    insert 
+    into
+        evaluations
+        (created_at, crop, district, elevation, planting_date, precipitation, recommendation, risk_level, score, soil_moisture, temperature) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+    returning id
+2026-07-26T00:36:18.271-05:00  INFO 30160 --- [chakra] [nio-8080-exec-9] c.c.service.impl.EvaluationServiceImpl   : Consultando clima para distrito=URCOS, cultivo=PAPA, fecha=2026-08-15
+2026-07-26T00:36:18.977-05:00 DEBUG 30160 --- [chakra] [nio-8080-exec-9] com.chakra.client.NasaPowerClient        : Temp NASA=7.86 C, gridElev=3739.76m, realElev=3161.0m, corrected=11.621940000000002 C
+2026-07-26T00:36:18.977-05:00 DEBUG 30160 --- [chakra] [nio-8080-exec-9] c.c.service.impl.AgriculturalModelImpl   : Scores individuales - T:55.18283333333335 P:24.637500000000006 SM:15.0 A:100.0
+2026-07-26T00:36:18.992-05:00  INFO 30160 --- [chakra] [nio-8080-exec-9] c.c.service.impl.AgriculturalModelImpl   : Evaluación completada - score:37.96 risk:NOT_RECOMMENDED crop:PAPA
+Hibernate: 
+    insert 
+    into
+        evaluations
+        (created_at, crop, district, elevation, planting_date, precipitation, recommendation, risk_level, score, soil_moisture, temperature) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+    returning id
+2026-07-26T00:36:19.024-05:00  INFO 30160 --- [chakra] [nio-8080-exec-1] c.c.service.impl.EvaluationServiceImpl   : Consultando clima para distrito=URCOS, cultivo=PAPA, fecha=2026-09-15
+2026-07-26T00:36:19.409-05:00 DEBUG 30160 --- [chakra] [nio-8080-exec-1] com.chakra.client.NasaPowerClient        : Temp NASA=8.54 C, gridElev=3739.76m, realElev=3161.0m, corrected=12.30194 C
+2026-07-26T00:36:19.409-05:00 DEBUG 30160 --- [chakra] [nio-8080-exec-1] c.c.service.impl.AgriculturalModelImpl   : Scores individuales - T:60.8495 P:54.75000000000001 SM:0.0 A:100.0
+2026-07-26T00:36:19.409-05:00  INFO 30160 --- [chakra] [nio-8080-exec-1] c.c.service.impl.AgriculturalModelImpl   : Evaluación completada - score:41.94 risk:NOT_RECOMMENDED crop:PAPA
+Hibernate: 
+    insert 
+    into
+        evaluations
+        (created_at, crop, district, elevation, planting_date, precipitation, recommendation, risk_level, score, soil_moisture, temperature) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+    returning id
+2026-07-26T00:36:19.471-05:00  INFO 30160 --- [chakra] [nio-8080-exec-2] c.c.service.impl.EvaluationServiceImpl   : Consultando clima para distrito=URCOS, cultivo=PAPA, fecha=2026-10-15
+2026-07-26T00:36:19.853-05:00 DEBUG 30160 --- [chakra] [nio-8080-exec-2] com.chakra.client.NasaPowerClient        : Temp NASA=8.9 C, gridElev=3739.76m, realElev=3161.0m, corrected=12.661940000000001 C
+2026-07-26T00:36:19.853-05:00 DEBUG 30160 --- [chakra] [nio-8080-exec-2] c.c.service.impl.AgriculturalModelImpl   : Scores individuales - T:63.84950000000001 P:100.0 SM:30.0 A:100.0
+2026-07-26T00:36:19.853-05:00  INFO 30160 --- [chakra] [nio-8080-exec-2] c.c.service.impl.AgriculturalModelImpl   : Evaluación completada - score:64.65 risk:CAUTION crop:PAPA
+Hibernate: 
+    insert 
+    into
+        evaluations
+        (created_at, crop, district, elevation, planting_date, precipitation, recommendation, risk_level, score, soil_moisture, temperature) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+    returning id
+2026-07-26T00:36:19.908-05:00  INFO 30160 --- [chakra] [nio-8080-exec-4] c.c.service.impl.EvaluationServiceImpl   : Consultando clima para distrito=URCOS, cultivo=PAPA, fecha=2026-11-15
+2026-07-26T00:36:20.472-05:00 DEBUG 30160 --- [chakra] [nio-8080-exec-4] com.chakra.client.NasaPowerClient        : Temp NASA=9.14 C, gridElev=3739.76m, realElev=3161.0m, corrected=12.901940000000002 C
+2026-07-26T00:36:20.472-05:00 DEBUG 30160 --- [chakra] [nio-8080-exec-4] c.c.service.impl.AgriculturalModelImpl   : Scores individuales - T:65.84950000000002 P:100.0 SM:60.0 A:100.0
+2026-07-26T00:36:20.472-05:00  INFO 30160 --- [chakra] [nio-8080-exec-4] c.c.service.impl.AgriculturalModelImpl   : Evaluación completada - score:75.75 risk:CAUTION crop:PAPA
+Hibernate: 
+    insert 
+    into
+        evaluations
+        (created_at, crop, district, elevation, planting_date, precipitation, recommendation, risk_level, score, soil_moisture, temperature) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+    returning id
+2026-07-26T00:36:20.528-05:00  INFO 30160 --- [chakra] [nio-8080-exec-6] c.c.service.impl.EvaluationServiceImpl   : Consultando clima para distrito=URCOS, cultivo=PAPA, fecha=2026-12-15
+2026-07-26T00:36:21.247-05:00 DEBUG 30160 --- [chakra] [nio-8080-exec-6] com.chakra.client.NasaPowerClient        : Temp NASA=8.77 C, gridElev=3739.76m, realElev=3161.0m, corrected=12.53194 C
+2026-07-26T00:36:21.247-05:00 DEBUG 30160 --- [chakra] [nio-8080-exec-6] c.c.service.impl.AgriculturalModelImpl   : Scores individuales - T:62.76616666666667 P:65.55833333333332 SM:100.0 A:100.0
+2026-07-26T00:36:21.247-05:00  INFO 30160 --- [chakra] [nio-8080-exec-6] c.c.service.impl.AgriculturalModelImpl   : Evaluación completada - score:80.22 risk:FAVORABLE crop:PAPA
+Hibernate: 
+    insert 
+    into
+        evaluations
+        (created_at, crop, district, elevation, planting_date, precipitation, recommendation, risk_level, score, soil_moisture, temperature) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+    returning id
+2026-07-26T00:36:21.288-05:00  INFO 30160 --- [chakra] [nio-8080-exec-5] c.c.service.impl.EvaluationServiceImpl   : Consultando clima para distrito=URCOS, cultivo=PAPA, fecha=2027-01-15
+2026-07-26T00:36:21.703-05:00 DEBUG 30160 --- [chakra] [nio-8080-exec-5] com.chakra.client.NasaPowerClient        : Temp NASA=8.52 C, gridElev=3739.76m, realElev=3161.0m, corrected=12.28194 C
+2026-07-26T00:36:21.703-05:00 DEBUG 30160 --- [chakra] [nio-8080-exec-5] c.c.service.impl.AgriculturalModelImpl   : Scores individuales - T:60.68283333333334 P:73.1625 SM:100.0 A:100.0
+2026-07-26T00:36:21.703-05:00  INFO 30160 --- [chakra] [nio-8080-exec-5] c.c.service.impl.AgriculturalModelImpl   : Evaluación completada - score:81.5 risk:FAVORABLE crop:PAPA
+Hibernate: 
+    insert 
+    into
+        evaluations
+        (created_at, crop, district, elevation, planting_date, precipitation, recommendation, risk_level, score, soil_moisture, temperature) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+    returning id
+2026-07-26T00:36:21.779-05:00  INFO 30160 --- [chakra] [nio-8080-exec-3] c.c.service.impl.EvaluationServiceImpl   : Consultando clima para distrito=URCOS, cultivo=PAPA, fecha=2027-02-15
+2026-07-26T00:36:22.502-05:00 DEBUG 30160 --- [chakra] [nio-8080-exec-3] com.chakra.client.NasaPowerClient        : Temp NASA=8.48 C, gridElev=3739.76m, realElev=3161.0m, corrected=12.241940000000001 C
+2026-07-26T00:36:22.502-05:00 DEBUG 30160 --- [chakra] [nio-8080-exec-3] c.c.service.impl.AgriculturalModelImpl   : Scores individuales - T:60.34950000000001 P:63.429166666666646 SM:100.0 A:100.0
+2026-07-26T00:36:22.502-05:00  INFO 30160 --- [chakra] [nio-8080-exec-3] c.c.service.impl.AgriculturalModelImpl   : Evaluación completada - score:78.96 risk:CAUTION crop:PAPA
+Hibernate: 
+    insert 
+    into
+        evaluations
+        (created_at, crop, district, elevation, planting_date, precipitation, recommendation, risk_level, score, soil_moisture, temperature) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+    returning id
+2026-07-26T00:36:22.554-05:00  INFO 30160 --- [chakra] [nio-8080-exec-8] c.c.service.impl.EvaluationServiceImpl   : Consultando clima para distrito=URCOS, cultivo=PAPA, fecha=2027-03-15
+2026-07-26T00:36:22.940-05:00 DEBUG 30160 --- [chakra] [nio-8080-exec-8] com.chakra.client.NasaPowerClient        : Temp NASA=8.33 C, gridElev=3739.76m, realElev=3161.0m, corrected=12.091940000000001 C
+2026-07-26T00:36:22.941-05:00 DEBUG 30160 --- [chakra] [nio-8080-exec-8] c.c.service.impl.AgriculturalModelImpl   : Scores individuales - T:59.099500000000006 P:100.0 SM:100.0 A:100.0
+2026-07-26T00:36:22.941-05:00  INFO 30160 --- [chakra] [nio-8080-exec-8] c.c.service.impl.AgriculturalModelImpl   : Evaluación completada - score:87.73 risk:FAVORABLE crop:PAPA
+Hibernate: 
+    insert 
+    into
+        evaluations
+        (created_at, crop, district, elevation, planting_date, precipitation, recommendation, risk_level, score, soil_moisture, temperature) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+    returning id
+2026-07-26T00:36:23.057-05:00  INFO 30160 --- [chakra] [nio-8080-exec-7] c.c.service.impl.EvaluationServiceImpl   : Consultando clima para distrito=URCOS, cultivo=PAPA, fecha=2027-04-15
+2026-07-26T00:36:23.642-05:00 DEBUG 30160 --- [chakra] [nio-8080-exec-7] com.chakra.client.NasaPowerClient        : Temp NASA=8.23 C, gridElev=3739.76m, realElev=3161.0m, corrected=11.991940000000001 C
+2026-07-26T00:36:23.642-05:00 DEBUG 30160 --- [chakra] [nio-8080-exec-7] c.c.service.impl.AgriculturalModelImpl   : Scores individuales - T:58.266166666666685 P:100.0 SM:100.0 A:100.0
+2026-07-26T00:36:23.642-05:00  INFO 30160 --- [chakra] [nio-8080-exec-7] c.c.service.impl.AgriculturalModelImpl   : Evaluación completada - score:87.48 risk:FAVORABLE crop:PAPA
+Hibernate: 
+    insert 
+    into
+        evaluations
+        (created_at, crop, district, elevation, planting_date, precipitation, recommendation, risk_level, score, soil_moisture, temperature) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+    returning id
+2026-07-26T00:36:24.027-05:00  INFO 30160 --- [chakra] [io-8080-exec-10] c.c.service.impl.EvaluationServiceImpl   : Consultando clima para distrito=URCOS, cultivo=PAPA, fecha=2027-05-15
+2026-07-26T00:36:24.798-05:00 DEBUG 30160 --- [chakra] [io-8080-exec-10] com.chakra.client.NasaPowerClient        : Temp NASA=7.86 C, gridElev=3739.76m, realElev=3161.0m, corrected=11.621940000000002 C
+2026-07-26T00:36:24.798-05:00 DEBUG 30160 --- [chakra] [io-8080-exec-10] c.c.service.impl.AgriculturalModelImpl   : Scores individuales - T:55.18283333333335 P:25.550000000000004 SM:100.0 A:100.0
+2026-07-26T00:36:24.798-05:00  INFO 30160 --- [chakra] [io-8080-exec-10] c.c.service.impl.AgriculturalModelImpl   : Evaluación completada - score:67.94 risk:CAUTION crop:PAPA
+Hibernate: 
+    insert 
+    into
+        evaluations
+        (created_at, crop, district, elevation, planting_date, precipitation, recommendation, risk_level, score, soil_moisture, temperature) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+    returning id
+2026-07-26T00:36:24.833-05:00  INFO 30160 --- [chakra] [nio-8080-exec-9] c.c.service.impl.EvaluationServiceImpl   : Consultando clima para distrito=URCOS, cultivo=PAPA, fecha=2027-06-15
+2026-07-26T00:36:25.210-05:00 DEBUG 30160 --- [chakra] [nio-8080-exec-9] com.chakra.client.NasaPowerClient        : Temp NASA=7.46 C, gridElev=3739.76m, realElev=3161.0m, corrected=11.221940000000002 C
+2026-07-26T00:36:25.210-05:00 DEBUG 30160 --- [chakra] [nio-8080-exec-9] c.c.service.impl.AgriculturalModelImpl   : Scores individuales - T:51.84950000000001 P:12.775000000000002 SM:75.00000000000003 A:100.0
+2026-07-26T00:36:25.210-05:00  INFO 30160 --- [chakra] [nio-8080-exec-9] c.c.service.impl.AgriculturalModelImpl   : Evaluación completada - score:55.0 risk:CAUTION crop:PAPA
+Hibernate: 
+    insert 
+    into
+        evaluations
+        (created_at, crop, district, elevation, planting_date, precipitation, recommendation, risk_level, score, soil_moisture, temperature) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+    returning id
+2026-07-26T00:36:25.283-05:00  INFO 30160 --- [chakra] [nio-8080-exec-1] c.c.service.impl.EvaluationServiceImpl   : Consultando clima para distrito=ANDAHUAYLILLAS, cultivo=PAPA, fecha=2026-08-15
+2026-07-26T00:36:25.664-05:00 DEBUG 30160 --- [chakra] [nio-8080-exec-1] com.chakra.client.NasaPowerClient        : Temp NASA=7.86 C, gridElev=3739.76m, realElev=3163.0m, corrected=11.60894 C
+2026-07-26T00:36:25.664-05:00 DEBUG 30160 --- [chakra] [nio-8080-exec-1] c.c.service.impl.AgriculturalModelImpl   : Scores individuales - T:55.0745 P:24.637500000000006 SM:15.0 A:100.0
+2026-07-26T00:36:25.664-05:00  INFO 30160 --- [chakra] [nio-8080-exec-1] c.c.service.impl.AgriculturalModelImpl   : Evaluación completada - score:37.93 risk:NOT_RECOMMENDED crop:PAPA
+Hibernate: 
+    insert 
+    into
+        evaluations
+        (created_at, crop, district, elevation, planting_date, precipitation, recommendation, risk_level, score, soil_moisture, temperature) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+    returning id
+2026-07-26T00:36:25.706-05:00  INFO 30160 --- [chakra] [nio-8080-exec-2] c.c.service.impl.EvaluationServiceImpl   : Consultando clima para distrito=ANDAHUAYLILLAS, cultivo=PAPA, fecha=2026-09-15
+2026-07-26T00:36:26.418-05:00 DEBUG 30160 --- [chakra] [nio-8080-exec-2] com.chakra.client.NasaPowerClient        : Temp NASA=8.54 C, gridElev=3739.76m, realElev=3163.0m, corrected=12.28894 C
+2026-07-26T00:36:26.418-05:00 DEBUG 30160 --- [chakra] [nio-8080-exec-2] c.c.service.impl.AgriculturalModelImpl   : Scores individuales - T:60.741166666666665 P:54.75000000000001 SM:0.0 A:100.0
+2026-07-26T00:36:26.418-05:00  INFO 30160 --- [chakra] [nio-8080-exec-2] c.c.service.impl.AgriculturalModelImpl   : Evaluación completada - score:41.91 risk:NOT_RECOMMENDED crop:PAPA
+Hibernate: 
+    insert 
+    into
+        evaluations
+        (created_at, crop, district, elevation, planting_date, precipitation, recommendation, risk_level, score, soil_moisture, temperature) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+    returning id
+2026-07-26T00:36:26.443-05:00  INFO 30160 --- [chakra] [nio-8080-exec-4] c.c.service.impl.EvaluationServiceImpl   : Consultando clima para distrito=ANDAHUAYLILLAS, cultivo=PAPA, fecha=2026-10-15
+2026-07-26T00:36:27.151-05:00 DEBUG 30160 --- [chakra] [nio-8080-exec-4] com.chakra.client.NasaPowerClient        : Temp NASA=8.9 C, gridElev=3739.76m, realElev=3163.0m, corrected=12.648940000000001 C
+2026-07-26T00:36:27.151-05:00 DEBUG 30160 --- [chakra] [nio-8080-exec-4] c.c.service.impl.AgriculturalModelImpl   : Scores individuales - T:63.74116666666668 P:100.0 SM:30.0 A:100.0
+2026-07-26T00:36:27.151-05:00  INFO 30160 --- [chakra] [nio-8080-exec-4] c.c.service.impl.AgriculturalModelImpl   : Evaluación completada - score:64.62 risk:CAUTION crop:PAPA
+Hibernate: 
+    insert 
+    into
+        evaluations
+        (created_at, crop, district, elevation, planting_date, precipitation, recommendation, risk_level, score, soil_moisture, temperature) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+    returning id
+2026-07-26T00:36:27.172-05:00  INFO 30160 --- [chakra] [nio-8080-exec-6] c.c.service.impl.EvaluationServiceImpl   : Consultando clima para distrito=ANDAHUAYLILLAS, cultivo=PAPA, fecha=2026-11-15
+2026-07-26T00:36:27.552-05:00 DEBUG 30160 --- [chakra] [nio-8080-exec-6] com.chakra.client.NasaPowerClient        : Temp NASA=9.14 C, gridElev=3739.76m, realElev=3163.0m, corrected=12.888940000000002 C
+2026-07-26T00:36:27.553-05:00 DEBUG 30160 --- [chakra] [nio-8080-exec-6] c.c.service.impl.AgriculturalModelImpl   : Scores individuales - T:65.74116666666667 P:100.0 SM:60.0 A:100.0
+2026-07-26T00:36:27.553-05:00  INFO 30160 --- [chakra] [nio-8080-exec-6] c.c.service.impl.AgriculturalModelImpl   : Evaluación completada - score:75.72 risk:CAUTION crop:PAPA
+Hibernate: 
+    insert 
+    into
+        evaluations
+        (created_at, crop, district, elevation, planting_date, precipitation, recommendation, risk_level, score, soil_moisture, temperature) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+    returning id
+2026-07-26T00:36:27.588-05:00  INFO 30160 --- [chakra] [nio-8080-exec-5] c.c.service.impl.EvaluationServiceImpl   : Consultando clima para distrito=ANDAHUAYLILLAS, cultivo=PAPA, fecha=2026-12-15
+2026-07-26T00:36:27.964-05:00 DEBUG 30160 --- [chakra] [nio-8080-exec-5] com.chakra.client.NasaPowerClient        : Temp NASA=8.77 C, gridElev=3739.76m, realElev=3163.0m, corrected=12.51894 C
+2026-07-26T00:36:27.964-05:00 DEBUG 30160 --- [chakra] [nio-8080-exec-5] c.c.service.impl.AgriculturalModelImpl   : Scores individuales - T:62.657833333333336 P:65.55833333333332 SM:100.0 A:100.0
+2026-07-26T00:36:27.964-05:00  INFO 30160 --- [chakra] [nio-8080-exec-5] c.c.service.impl.AgriculturalModelImpl   : Evaluación completada - score:80.19 risk:FAVORABLE crop:PAPA
+Hibernate: 
+    insert 
+    into
+        evaluations
+        (created_at, crop, district, elevation, planting_date, precipitation, recommendation, risk_level, score, soil_moisture, temperature) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+    returning id
+2026-07-26T00:36:28.494-05:00  INFO 30160 --- [chakra] [nio-8080-exec-3] c.c.service.impl.EvaluationServiceImpl   : Consultando clima para distrito=ANDAHUAYLILLAS, cultivo=PAPA, fecha=2027-01-15
+2026-07-26T00:36:29.202-05:00 DEBUG 30160 --- [chakra] [nio-8080-exec-3] com.chakra.client.NasaPowerClient        : Temp NASA=8.52 C, gridElev=3739.76m, realElev=3163.0m, corrected=12.26894 C
+2026-07-26T00:36:29.202-05:00 DEBUG 30160 --- [chakra] [nio-8080-exec-3] c.c.service.impl.AgriculturalModelImpl   : Scores individuales - T:60.5745 P:73.1625 SM:100.0 A:100.0
+2026-07-26T00:36:29.202-05:00  INFO 30160 --- [chakra] [nio-8080-exec-3] c.c.service.impl.AgriculturalModelImpl   : Evaluación completada - score:81.46 risk:FAVORABLE crop:PAPA
+Hibernate: 
+    insert 
+    into
+        evaluations
+        (created_at, crop, district, elevation, planting_date, precipitation, recommendation, risk_level, score, soil_moisture, temperature) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+    returning id
+2026-07-26T00:36:29.239-05:00  INFO 30160 --- [chakra] [nio-8080-exec-8] c.c.service.impl.EvaluationServiceImpl   : Consultando clima para distrito=ANDAHUAYLILLAS, cultivo=PAPA, fecha=2027-02-15
+2026-07-26T00:36:29.624-05:00 DEBUG 30160 --- [chakra] [nio-8080-exec-8] com.chakra.client.NasaPowerClient        : Temp NASA=8.48 C, gridElev=3739.76m, realElev=3163.0m, corrected=12.228940000000001 C
+2026-07-26T00:36:29.625-05:00 DEBUG 30160 --- [chakra] [nio-8080-exec-8] c.c.service.impl.AgriculturalModelImpl   : Scores individuales - T:60.24116666666668 P:63.429166666666646 SM:100.0 A:100.0
+2026-07-26T00:36:29.625-05:00  INFO 30160 --- [chakra] [nio-8080-exec-8] c.c.service.impl.AgriculturalModelImpl   : Evaluación completada - score:78.93 risk:CAUTION crop:PAPA
+Hibernate: 
+    insert 
+    into
+        evaluations
+        (created_at, crop, district, elevation, planting_date, precipitation, recommendation, risk_level, score, soil_moisture, temperature) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+    returning id
+2026-07-26T00:36:29.664-05:00  INFO 30160 --- [chakra] [nio-8080-exec-7] c.c.service.impl.EvaluationServiceImpl   : Consultando clima para distrito=ANDAHUAYLILLAS, cultivo=PAPA, fecha=2027-03-15
+2026-07-26T00:36:30.405-05:00 DEBUG 30160 --- [chakra] [nio-8080-exec-7] com.chakra.client.NasaPowerClient        : Temp NASA=8.33 C, gridElev=3739.76m, realElev=3163.0m, corrected=12.078940000000001 C
+2026-07-26T00:36:30.405-05:00 DEBUG 30160 --- [chakra] [nio-8080-exec-7] c.c.service.impl.AgriculturalModelImpl   : Scores individuales - T:58.99116666666668 P:100.0 SM:100.0 A:100.0
+2026-07-26T00:36:30.405-05:00  INFO 30160 --- [chakra] [nio-8080-exec-7] c.c.service.impl.AgriculturalModelImpl   : Evaluación completada - score:87.7 risk:FAVORABLE crop:PAPA
+Hibernate: 
+    insert 
+    into
+        evaluations
+        (created_at, crop, district, elevation, planting_date, precipitation, recommendation, risk_level, score, soil_moisture, temperature) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+    returning id
+2026-07-26T00:36:30.448-05:00  INFO 30160 --- [chakra] [io-8080-exec-10] c.c.service.impl.EvaluationServiceImpl   : Consultando clima para distrito=ANDAHUAYLILLAS, cultivo=PAPA, fecha=2027-04-15
+2026-07-26T00:36:31.326-05:00 DEBUG 30160 --- [chakra] [io-8080-exec-10] com.chakra.client.NasaPowerClient        : Temp NASA=8.23 C, gridElev=3739.76m, realElev=3163.0m, corrected=11.978940000000001 C
+2026-07-26T00:36:31.326-05:00 DEBUG 30160 --- [chakra] [io-8080-exec-10] c.c.service.impl.AgriculturalModelImpl   : Scores individuales - T:58.15783333333334 P:100.0 SM:100.0 A:100.0
+2026-07-26T00:36:31.326-05:00  INFO 30160 --- [chakra] [io-8080-exec-10] c.c.service.impl.AgriculturalModelImpl   : Evaluación completada - score:87.45 risk:FAVORABLE crop:PAPA
+Hibernate: 
+    insert 
+    into
+        evaluations
+        (created_at, crop, district, elevation, planting_date, precipitation, recommendation, risk_level, score, soil_moisture, temperature) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+    returning id
+2026-07-26T00:36:31.372-05:00  INFO 30160 --- [chakra] [nio-8080-exec-9] c.c.service.impl.EvaluationServiceImpl   : Consultando clima para distrito=ANDAHUAYLILLAS, cultivo=PAPA, fecha=2027-05-15
+2026-07-26T00:36:31.836-05:00 DEBUG 30160 --- [chakra] [nio-8080-exec-9] com.chakra.client.NasaPowerClient        : Temp NASA=7.86 C, gridElev=3739.76m, realElev=3163.0m, corrected=11.60894 C
+2026-07-26T00:36:31.836-05:00 DEBUG 30160 --- [chakra] [nio-8080-exec-9] c.c.service.impl.AgriculturalModelImpl   : Scores individuales - T:55.0745 P:25.550000000000004 SM:100.0 A:100.0
+2026-07-26T00:36:31.836-05:00  INFO 30160 --- [chakra] [nio-8080-exec-9] c.c.service.impl.AgriculturalModelImpl   : Evaluación completada - score:67.91 risk:CAUTION crop:PAPA
+Hibernate: 
+    insert 
+    into
+        evaluations
+        (created_at, crop, district, elevation, planting_date, precipitation, recommendation, risk_level, score, soil_moisture, temperature) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+    returning id
+2026-07-26T00:36:31.880-05:00  INFO 30160 --- [chakra] [nio-8080-exec-1] c.c.service.impl.EvaluationServiceImpl   : Consultando clima para distrito=ANDAHUAYLILLAS, cultivo=PAPA, fecha=2027-06-15
+2026-07-26T00:36:32.655-05:00 DEBUG 30160 --- [chakra] [nio-8080-exec-1] com.chakra.client.NasaPowerClient        : Temp NASA=7.46 C, gridElev=3739.76m, realElev=3163.0m, corrected=11.208940000000002 C
+2026-07-26T00:36:32.655-05:00 DEBUG 30160 --- [chakra] [nio-8080-exec-1] c.c.service.impl.AgriculturalModelImpl   : Scores individuales - T:51.741166666666686 P:12.775000000000002 SM:75.00000000000003 A:100.0
+2026-07-26T00:36:32.655-05:00  INFO 30160 --- [chakra] [nio-8080-exec-1] c.c.service.impl.AgriculturalModelImpl   : Evaluación completada - score:54.97 risk:CAUTION crop:PAPA
+Hibernate: 
+    insert 
+    into
+        evaluations
+        (created_at, crop, district, elevation, planting_date, precipitation, recommendation, risk_level, score, soil_moisture, temperature) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+    returning id
+2026-07-26T00:36:32.677-05:00  INFO 30160 --- [chakra] [nio-8080-exec-2] c.c.service.impl.EvaluationServiceImpl   : Consultando clima para distrito=OROPESA, cultivo=PAPA, fecha=2026-08-15
+2026-07-26T00:36:33.383-05:00 DEBUG 30160 --- [chakra] [nio-8080-exec-2] com.chakra.client.NasaPowerClient        : Temp NASA=7.86 C, gridElev=3739.76m, realElev=3157.0m, corrected=11.647940000000002 C
+2026-07-26T00:36:33.383-05:00 DEBUG 30160 --- [chakra] [nio-8080-exec-2] c.c.service.impl.AgriculturalModelImpl   : Scores individuales - T:55.39950000000002 P:24.637500000000006 SM:15.0 A:100.0
+2026-07-26T00:36:33.383-05:00  INFO 30160 --- [chakra] [nio-8080-exec-2] c.c.service.impl.AgriculturalModelImpl   : Evaluación completada - score:38.03 risk:NOT_RECOMMENDED crop:PAPA
+Hibernate: 
+    insert 
+    into
+        evaluations
+        (created_at, crop, district, elevation, planting_date, precipitation, recommendation, risk_level, score, soil_moisture, temperature) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+    returning id
+2026-07-26T00:36:33.416-05:00  INFO 30160 --- [chakra] [nio-8080-exec-4] c.c.service.impl.EvaluationServiceImpl   : Consultando clima para distrito=OROPESA, cultivo=PAPA, fecha=2026-09-15
+2026-07-26T00:36:33.887-05:00 DEBUG 30160 --- [chakra] [nio-8080-exec-4] com.chakra.client.NasaPowerClient        : Temp NASA=8.54 C, gridElev=3739.76m, realElev=3157.0m, corrected=12.32794 C
+2026-07-26T00:36:33.888-05:00 DEBUG 30160 --- [chakra] [nio-8080-exec-4] c.c.service.impl.AgriculturalModelImpl   : Scores individuales - T:61.06616666666667 P:54.75000000000001 SM:0.0 A:100.0
+2026-07-26T00:36:33.888-05:00  INFO 30160 --- [chakra] [nio-8080-exec-4] c.c.service.impl.AgriculturalModelImpl   : Evaluación completada - score:42.01 risk:NOT_RECOMMENDED crop:PAPA
+Hibernate: 
+    insert 
+    into
+        evaluations
+        (created_at, crop, district, elevation, planting_date, precipitation, recommendation, risk_level, score, soil_moisture, temperature) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+    returning id
+2026-07-26T00:36:33.923-05:00  INFO 30160 --- [chakra] [nio-8080-exec-6] c.c.service.impl.EvaluationServiceImpl   : Consultando clima para distrito=OROPESA, cultivo=PAPA, fecha=2026-10-15
+2026-07-26T00:36:34.399-05:00 DEBUG 30160 --- [chakra] [nio-8080-exec-6] com.chakra.client.NasaPowerClient        : Temp NASA=8.9 C, gridElev=3739.76m, realElev=3157.0m, corrected=12.687940000000001 C
+2026-07-26T00:36:34.399-05:00 DEBUG 30160 --- [chakra] [nio-8080-exec-6] c.c.service.impl.AgriculturalModelImpl   : Scores individuales - T:64.06616666666667 P:100.0 SM:30.0 A:100.0
+2026-07-26T00:36:34.399-05:00  INFO 30160 --- [chakra] [nio-8080-exec-6] c.c.service.impl.AgriculturalModelImpl   : Evaluación completada - score:64.72 risk:CAUTION crop:PAPA
+Hibernate: 
+    insert 
+    into
+        evaluations
+        (created_at, crop, district, elevation, planting_date, precipitation, recommendation, risk_level, score, soil_moisture, temperature) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+    returning id
+2026-07-26T00:36:34.423-05:00  INFO 30160 --- [chakra] [nio-8080-exec-5] c.c.service.impl.EvaluationServiceImpl   : Consultando clima para distrito=OROPESA, cultivo=PAPA, fecha=2026-11-15
+2026-07-26T00:36:34.907-05:00 DEBUG 30160 --- [chakra] [nio-8080-exec-5] com.chakra.client.NasaPowerClient        : Temp NASA=9.14 C, gridElev=3739.76m, realElev=3157.0m, corrected=12.927940000000001 C
+2026-07-26T00:36:34.907-05:00 DEBUG 30160 --- [chakra] [nio-8080-exec-5] c.c.service.impl.AgriculturalModelImpl   : Scores individuales - T:66.06616666666667 P:100.0 SM:60.0 A:100.0
+2026-07-26T00:36:34.908-05:00  INFO 30160 --- [chakra] [nio-8080-exec-5] c.c.service.impl.AgriculturalModelImpl   : Evaluación completada - score:75.82 risk:CAUTION crop:PAPA
+Hibernate: 
+    insert 
+    into
+        evaluations
+        (created_at, crop, district, elevation, planting_date, precipitation, recommendation, risk_level, score, soil_moisture, temperature) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+    returning id
+2026-07-26T00:36:34.939-05:00  INFO 30160 --- [chakra] [nio-8080-exec-3] c.c.service.impl.EvaluationServiceImpl   : Consultando clima para distrito=OROPESA, cultivo=PAPA, fecha=2026-12-15
+2026-07-26T00:36:35.830-05:00 DEBUG 30160 --- [chakra] [nio-8080-exec-3] com.chakra.client.NasaPowerClient        : Temp NASA=8.77 C, gridElev=3739.76m, realElev=3157.0m, corrected=12.55794 C
+2026-07-26T00:36:35.830-05:00 DEBUG 30160 --- [chakra] [nio-8080-exec-3] c.c.service.impl.AgriculturalModelImpl   : Scores individuales - T:62.98283333333333 P:65.55833333333332 SM:100.0 A:100.0
+2026-07-26T00:36:35.830-05:00  INFO 30160 --- [chakra] [nio-8080-exec-3] c.c.service.impl.AgriculturalModelImpl   : Evaluación completada - score:80.28 risk:FAVORABLE crop:PAPA
+Hibernate: 
+    insert 
+    into
+        evaluations
+        (created_at, crop, district, elevation, planting_date, precipitation, recommendation, risk_level, score, soil_moisture, temperature) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+    returning id
+2026-07-26T00:36:35.879-05:00  INFO 30160 --- [chakra] [nio-8080-exec-8] c.c.service.impl.EvaluationServiceImpl   : Consultando clima para distrito=OROPESA, cultivo=PAPA, fecha=2027-01-15
+2026-07-26T00:36:36.336-05:00 DEBUG 30160 --- [chakra] [nio-8080-exec-8] com.chakra.client.NasaPowerClient        : Temp NASA=8.52 C, gridElev=3739.76m, realElev=3157.0m, corrected=12.30794 C
+2026-07-26T00:36:36.336-05:00 DEBUG 30160 --- [chakra] [nio-8080-exec-8] c.c.service.impl.AgriculturalModelImpl   : Scores individuales - T:60.899499999999996 P:73.1625 SM:100.0 A:100.0
+2026-07-26T00:36:36.336-05:00  INFO 30160 --- [chakra] [nio-8080-exec-8] c.c.service.impl.AgriculturalModelImpl   : Evaluación completada - score:81.56 risk:FAVORABLE crop:PAPA
+Hibernate: 
+    insert 
+    into
+        evaluations
+        (created_at, crop, district, elevation, planting_date, precipitation, recommendation, risk_level, score, soil_moisture, temperature) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+    returning id
+2026-07-26T00:36:36.416-05:00  INFO 30160 --- [chakra] [nio-8080-exec-7] c.c.service.impl.EvaluationServiceImpl   : Consultando clima para distrito=OROPESA, cultivo=PAPA, fecha=2027-02-15
+2026-07-26T00:36:37.211-05:00 DEBUG 30160 --- [chakra] [nio-8080-exec-7] com.chakra.client.NasaPowerClient        : Temp NASA=8.48 C, gridElev=3739.76m, realElev=3157.0m, corrected=12.267940000000001 C
+2026-07-26T00:36:37.211-05:00 DEBUG 30160 --- [chakra] [nio-8080-exec-7] c.c.service.impl.AgriculturalModelImpl   : Scores individuales - T:60.566166666666675 P:63.429166666666646 SM:100.0 A:100.0
+2026-07-26T00:36:37.211-05:00  INFO 30160 --- [chakra] [nio-8080-exec-7] c.c.service.impl.AgriculturalModelImpl   : Evaluación completada - score:79.03 risk:CAUTION crop:PAPA
+Hibernate: 
+    insert 
+    into
+        evaluations
+        (created_at, crop, district, elevation, planting_date, precipitation, recommendation, risk_level, score, soil_moisture, temperature) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+    returning id
+2026-07-26T00:36:37.262-05:00  INFO 30160 --- [chakra] [io-8080-exec-10] c.c.service.impl.EvaluationServiceImpl   : Consultando clima para distrito=OROPESA, cultivo=PAPA, fecha=2027-03-15
+2026-07-26T00:36:37.966-05:00 DEBUG 30160 --- [chakra] [io-8080-exec-10] com.chakra.client.NasaPowerClient        : Temp NASA=8.33 C, gridElev=3739.76m, realElev=3157.0m, corrected=12.11794 C
+2026-07-26T00:36:37.966-05:00 DEBUG 30160 --- [chakra] [io-8080-exec-10] c.c.service.impl.AgriculturalModelImpl   : Scores individuales - T:59.316166666666675 P:100.0 SM:100.0 A:100.0
+2026-07-26T00:36:37.966-05:00  INFO 30160 --- [chakra] [io-8080-exec-10] c.c.service.impl.AgriculturalModelImpl   : Evaluación completada - score:87.79 risk:FAVORABLE crop:PAPA
+Hibernate: 
+    insert 
+    into
+        evaluations
+        (created_at, crop, district, elevation, planting_date, precipitation, recommendation, risk_level, score, soil_moisture, temperature) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+    returning id
+2026-07-26T00:36:38.080-05:00  INFO 30160 --- [chakra] [nio-8080-exec-9] c.c.service.impl.EvaluationServiceImpl   : Consultando clima para distrito=OROPESA, cultivo=PAPA, fecha=2027-04-15
+2026-07-26T00:36:38.491-05:00 DEBUG 30160 --- [chakra] [nio-8080-exec-9] com.chakra.client.NasaPowerClient        : Temp NASA=8.23 C, gridElev=3739.76m, realElev=3157.0m, corrected=12.017940000000001 C
+2026-07-26T00:36:38.491-05:00 DEBUG 30160 --- [chakra] [nio-8080-exec-9] c.c.service.impl.AgriculturalModelImpl   : Scores individuales - T:58.48283333333334 P:100.0 SM:100.0 A:100.0
+2026-07-26T00:36:38.491-05:00  INFO 30160 --- [chakra] [nio-8080-exec-9] c.c.service.impl.AgriculturalModelImpl   : Evaluación completada - score:87.54 risk:FAVORABLE crop:PAPA
+Hibernate: 
+    insert 
+    into
+        evaluations
+        (created_at, crop, district, elevation, planting_date, precipitation, recommendation, risk_level, score, soil_moisture, temperature) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+    returning id
+2026-07-26T00:36:38.587-05:00  INFO 30160 --- [chakra] [nio-8080-exec-1] c.c.service.impl.EvaluationServiceImpl   : Consultando clima para distrito=OROPESA, cultivo=PAPA, fecha=2027-05-15
+2026-07-26T00:36:39.038-05:00 DEBUG 30160 --- [chakra] [nio-8080-exec-1] com.chakra.client.NasaPowerClient        : Temp NASA=7.86 C, gridElev=3739.76m, realElev=3157.0m, corrected=11.647940000000002 C
+2026-07-26T00:36:39.038-05:00 DEBUG 30160 --- [chakra] [nio-8080-exec-1] c.c.service.impl.AgriculturalModelImpl   : Scores individuales - T:55.39950000000002 P:25.550000000000004 SM:100.0 A:100.0
+2026-07-26T00:36:39.038-05:00  INFO 30160 --- [chakra] [nio-8080-exec-1] c.c.service.impl.AgriculturalModelImpl   : Evaluación completada - score:68.01 risk:CAUTION crop:PAPA
+Hibernate: 
+    insert 
+    into
+        evaluations
+        (created_at, crop, district, elevation, planting_date, precipitation, recommendation, risk_level, score, soil_moisture, temperature) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+    returning id
+2026-07-26T00:36:39.104-05:00  INFO 30160 --- [chakra] [nio-8080-exec-2] c.c.service.impl.EvaluationServiceImpl   : Consultando clima para distrito=OROPESA, cultivo=PAPA, fecha=2027-06-15
+2026-07-26T00:36:39.824-05:00 DEBUG 30160 --- [chakra] [nio-8080-exec-2] com.chakra.client.NasaPowerClient        : Temp NASA=7.46 C, gridElev=3739.76m, realElev=3157.0m, corrected=11.247940000000002 C
+2026-07-26T00:36:39.824-05:00 DEBUG 30160 --- [chakra] [nio-8080-exec-2] c.c.service.impl.AgriculturalModelImpl   : Scores individuales - T:52.06616666666668 P:12.775000000000002 SM:75.00000000000003 A:100.0
+2026-07-26T00:36:39.824-05:00  INFO 30160 --- [chakra] [nio-8080-exec-2] c.c.service.impl.AgriculturalModelImpl   : Evaluación completada - score:55.06 risk:CAUTION crop:PAPA
+Hibernate: 
+    insert 
+    into
+        evaluations
+        (created_at, crop, district, elevation, planting_date, precipitation, recommendation, risk_level, score, soil_moisture, temperature) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+    returning id
+2026-07-26T00:36:43.194-05:00  INFO 30160 --- [chakra] [nio-8080-exec-6] c.c.service.impl.EvaluationServiceImpl   : Consultando clima para distrito=CALCA, cultivo=CAFE, fecha=2026-07-28
+2026-07-26T00:36:43.577-05:00 DEBUG 30160 --- [chakra] [nio-8080-exec-6] com.chakra.client.NasaPowerClient        : Temp NASA=7.22 C, gridElev=3739.76m, realElev=2926.0m, corrected=12.509440000000001 C
+2026-07-26T00:36:43.577-05:00 DEBUG 30160 --- [chakra] [nio-8080-exec-6] c.c.service.impl.AgriculturalModelImpl   : Scores individuales - T:8.49066666666669 P:8.273333333333333 SM:45.0 A:0.0
+2026-07-26T00:36:43.577-05:00  INFO 30160 --- [chakra] [nio-8080-exec-6] c.c.service.impl.AgriculturalModelImpl   : Evaluación completada - score:19.53 risk:NOT_RECOMMENDED crop:CAFE
+Hibernate: 
+    insert 
+    into
+        evaluations
+        (created_at, crop, district, elevation, planting_date, precipitation, recommendation, risk_level, score, soil_moisture, temperature) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+    returning id
+2026-07-26T00:37:12.164-05:00  INFO 30160 --- [chakra] [nio-8080-exec-5] c.c.service.impl.EvaluationServiceImpl   : Consultando clima para distrito=URCOS, cultivo=MAIZ, fecha=2026-08-07
+2026-07-26T00:37:12.693-05:00 DEBUG 30160 --- [chakra] [nio-8080-exec-5] com.chakra.client.NasaPowerClient        : Temp NASA=7.86 C, gridElev=3739.76m, realElev=3161.0m, corrected=11.621940000000002 C
+2026-07-26T00:37:12.693-05:00 DEBUG 30160 --- [chakra] [nio-8080-exec-5] c.c.service.impl.AgriculturalModelImpl   : Scores individuales - T:13.516166666666685 P:19.710000000000004 SM:40.0 A:0.0
+2026-07-26T00:37:12.693-05:00  INFO 30160 --- [chakra] [nio-8080-exec-5] c.c.service.impl.AgriculturalModelImpl   : Evaluación completada - score:19.97 risk:NOT_RECOMMENDED crop:MAIZ
+Hibernate: 
+    insert 
+    into
+        evaluations
+        (created_at, crop, district, elevation, planting_date, precipitation, recommendation, risk_level, score, soil_moisture, temperature) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+    returning id
+2026-07-26T00:37:44.071-05:00  INFO 30160 --- [chakra] [nio-8080-exec-3] c.c.service.impl.EvaluationServiceImpl   : Consultando clima para distrito=URUBAMBA, cultivo=PAPA, fecha=2026-09-15
+2026-07-26T00:37:44.842-05:00 DEBUG 30160 --- [chakra] [nio-8080-exec-3] com.chakra.client.NasaPowerClient        : Temp NASA=8.54 C, gridElev=3739.76m, realElev=2870.0m, corrected=14.19344 C
+2026-07-26T00:37:44.842-05:00 DEBUG 30160 --- [chakra] [nio-8080-exec-3] c.c.service.impl.AgriculturalModelImpl   : Scores individuales - T:76.61200000000001 P:54.75000000000001 SM:0.0 A:100.0
+2026-07-26T00:37:44.842-05:00  INFO 30160 --- [chakra] [nio-8080-exec-3] c.c.service.impl.AgriculturalModelImpl   : Evaluación completada - score:46.67 risk:NOT_RECOMMENDED crop:PAPA
+Hibernate: 
+    insert 
+    into
+        evaluations
+        (created_at, crop, district, elevation, planting_date, precipitation, recommendation, risk_level, score, soil_moisture, temperature) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+    returning id
+2026-07-26T00:39:12.209-05:00  INFO 30160 --- [chakra] [nio-8080-exec-7] c.c.service.impl.EvaluationServiceImpl   : Consultando clima para distrito=PISAC, cultivo=MAIZ, fecha=2027-01-29
+2026-07-26T00:39:13.219-05:00 DEBUG 30160 --- [chakra] [nio-8080-exec-7] com.chakra.client.NasaPowerClient        : Temp NASA=8.52 C, gridElev=3739.76m, realElev=2972.0m, corrected=13.510440000000001 C
+2026-07-26T00:39:13.219-05:00 DEBUG 30160 --- [chakra] [nio-8080-exec-7] c.c.service.impl.AgriculturalModelImpl   : Scores individuales - T:29.253666666666675 P:9.743749999999988 SM:100.0 A:0.0
+2026-07-26T00:39:13.219-05:00  INFO 30160 --- [chakra] [nio-8080-exec-7] c.c.service.impl.AgriculturalModelImpl   : Evaluación completada - score:36.7 risk:NOT_RECOMMENDED crop:MAIZ
+Hibernate: 
+    insert 
+    into
+        evaluations
+        (created_at, crop, district, elevation, planting_date, precipitation, recommendation, risk_level, score, soil_moisture, temperature) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+    returning id
+2026-07-26T00:39:27.316-05:00  INFO 30160 --- [chakra] [io-8080-exec-10] c.c.service.impl.EvaluationServiceImpl   : Consultando clima para distrito=OROPESA, cultivo=MAIZ, fecha=2026-12-17
+2026-07-26T00:39:28.074-05:00 DEBUG 30160 --- [chakra] [io-8080-exec-10] com.chakra.client.NasaPowerClient        : Temp NASA=8.77 C, gridElev=3739.76m, realElev=3157.0m, corrected=12.55794 C
+2026-07-26T00:39:28.074-05:00 DEBUG 30160 --- [chakra] [io-8080-exec-10] c.c.service.impl.AgriculturalModelImpl   : Scores individuales - T:21.31616666666667 P:0.0 SM:100.0 A:0.0
+2026-07-26T00:39:28.074-05:00  INFO 30160 --- [chakra] [io-8080-exec-10] c.c.service.impl.AgriculturalModelImpl   : Evaluación completada - score:31.39 risk:NOT_RECOMMENDED crop:MAIZ
+Hibernate: 
+    insert 
+    into
+        evaluations
+        (created_at, crop, district, elevation, planting_date, precipitation, recommendation, risk_level, score, soil_moisture, temperature) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+    returning id
+2026-07-26T00:40:04.407-05:00  INFO 30160 --- [chakra] [nio-8080-exec-9] c.c.service.impl.EvaluationServiceImpl   : Consultando clima para distrito=LIMATAMBO, cultivo=PAPA, fecha=2027-04-27
+2026-07-26T00:40:05.023-05:00 DEBUG 30160 --- [chakra] [nio-8080-exec-9] com.chakra.client.NasaPowerClient        : Temp NASA=8.41 C, gridElev=3724.94m, realElev=2711.0m, corrected=15.00061 C
+2026-07-26T00:40:05.023-05:00 DEBUG 30160 --- [chakra] [nio-8080-exec-9] c.c.service.impl.AgriculturalModelImpl   : Scores individuales - T:83.33841666666667 P:100.0 SM:100.0 A:100.0
+2026-07-26T00:40:05.023-05:00  INFO 30160 --- [chakra] [nio-8080-exec-9] c.c.service.impl.AgriculturalModelImpl   : Evaluación completada - score:95.0 risk:FAVORABLE crop:PAPA
+Hibernate: 
+    insert 
+    into
+        evaluations
+        (created_at, crop, district, elevation, planting_date, precipitation, recommendation, risk_level, score, soil_moisture, temperature) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+    returning id

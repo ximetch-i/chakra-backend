@@ -42,9 +42,6 @@ public class Evaluation {
     @Column(nullable = false)
     private Double precipitation;
 
-    @Column(nullable = false)
-    private Double humidity;
-
     @Column(name = "soil_moisture", nullable = false)
     private Double soilMoisture;
 

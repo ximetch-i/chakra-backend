@@ -15,7 +15,6 @@ public class WeatherDataDTO {
 
     private Double temperature;
     private Double precipitation;
-    private Double humidity;
     private Double soilMoisture;
     private Double elevation;
 }

@@ -23,7 +23,6 @@ public class EvaluationResponse {
     private LocalDate plantingDate;
     private Double temperature;
     private Double precipitation;
-    private Double humidity;
     private Double soilMoisture;
     private Double elevation;
     private Double score;

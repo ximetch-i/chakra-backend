@@ -35,7 +35,7 @@ public class NasaPowerClient {
         try {
             NasaPowerClimatologyResponseDTO response = nasaPowerWebClient.get()
                     .uri(uriBuilder -> uriBuilder
-                            .queryParam("parameters", "T2M,PRECTOTCORR,RH2M,GWETTOP")
+                            .queryParam("parameters", "T2M,PRECTOTCORR,GWETTOP")
                             .queryParam("community", "AG")
                             .queryParam("longitude", coordinates.longitude())
                             .queryParam("latitude", coordinates.latitude())
@@ -45,7 +45,7 @@ public class NasaPowerClient {
                     .bodyToMono(NasaPowerClimatologyResponseDTO.class)
                     .block();
 
-            return mapToWeatherData(response, monthKey);
+            return mapToWeatherData(response, monthKey, coordinates);
 
         } catch (Exception ex) {
             log.error("Error al consultar NASA POWER para el distrito {}: {}", district, ex.getMessage());
@@ -53,7 +53,8 @@ public class NasaPowerClient {
         }
     }
 
-    private WeatherDataDTO mapToWeatherData(NasaPowerClimatologyResponseDTO response, String monthKey) {
+    private WeatherDataDTO mapToWeatherData(NasaPowerClimatologyResponseDTO response, String monthKey,
+                                           DistrictCoordinatesResolver.Coordinates coordinates) {
         if (response == null || response.getProperties() == null || response.getProperties().getParameter() == null) {
             throw new ExternalApiException("Empty response from NASA POWER");
         }
@@ -62,17 +63,19 @@ public class NasaPowerClient {
 
         Double temperature = extractValue(parameter, "T2M", monthKey);
         Double precipitation = extractValue(parameter, "PRECTOTCORR", monthKey);
-        Double humidity = extractValue(parameter, "RH2M", monthKey);
         Double soilMoisture = extractValue(parameter, "GWETTOP", monthKey);
 
-        Double elevation = response.getGeometry().getCoordinates().get(2);
+        double gridElevation = response.getGeometry().getCoordinates().get(2);
+        double correctedTemperature = temperature + (gridElevation - coordinates.elevation()) * 0.0065;
+
+        log.debug("Temp NASA={} C, gridElev={}m, realElev={}m, corrected={} C",
+                temperature, gridElevation, coordinates.elevation(), correctedTemperature);
 
         return WeatherDataDTO.builder()
-                .temperature(temperature)
+                .temperature(correctedTemperature)
                 .precipitation(precipitation)
-                .humidity(humidity)
                 .soilMoisture(soilMoisture)
-                .elevation(elevation)
+                .elevation(coordinates.elevation())
                 .build();
     }
 

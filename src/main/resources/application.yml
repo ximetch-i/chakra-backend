@@ -27,7 +27,7 @@ chakra:
     nasa-power:
       base-url: https://power.larc.nasa.gov/api/temporal/climatology/point
       community: AG
-      parameters: T2M,PRECTOTCORR,RH2M
+      parameters: T2M,PRECTOTCORR
   external-api:
     timeout-ms: 5000
 
