@@ -35,10 +35,10 @@ public class AgriculturalModelImpl implements AgriculturalModel {
         log.debug("Scores individuales - T:{} P:{} SM:{} A:{}",
                 scoreTemperature, scorePrecipitation, scoreSoilMoisture, scoreElevation);
 
-        double suitabilityIndex = scoreTemperature * params.weightTemperature()
-                + scorePrecipitation * params.weightPrecipitation()
-                + scoreSoilMoisture * params.weightSoilMoisture()
-                + scoreElevation * params.weightElevation();
+        double suitabilityIndex = scoreTemperature * CropParameters.WEIGHT_TEMPERATURE
+                + scorePrecipitation * CropParameters.WEIGHT_PRECIPITATION
+                + scoreSoilMoisture * CropParameters.WEIGHT_SOIL_MOISTURE
+                + scoreElevation * CropParameters.WEIGHT_ELEVATION;
 
         double score = Math.round(suitabilityIndex * 100.0) / 100.0;
         RiskLevel riskLevel = classifyRisk(score);
@@ -49,11 +49,11 @@ public class AgriculturalModelImpl implements AgriculturalModel {
         scores.put("soilMoisture", scoreSoilMoisture);
         scores.put("elevation", scoreElevation);
 
-        String recommendation = buildRecommendation(crop, riskLevel, scores, weatherData);
+        String limitingFactor = findLimitingFactorKey(scores);
 
         log.info("Evaluación completada - score:{} risk:{} crop:{}", score, riskLevel, crop);
 
-        return new Result(score, riskLevel, recommendation);
+        return new Result(score, riskLevel, limitingFactor);
     }
 
     private double normalizeTemperature(double temperature, Trapezoid t) {
@@ -92,56 +92,10 @@ public class AgriculturalModelImpl implements AgriculturalModel {
         return RiskLevel.NOT_RECOMMENDED;
     }
 
-    private String buildRecommendation(Crop crop, RiskLevel riskLevel,
-                                       Map<String, Double> scores, WeatherDataDTO weatherData) {
-        String cropName = cropNameEs(crop);
-
-        if (riskLevel == RiskLevel.FAVORABLE) {
-            return String.format(
-                    "Condiciones favorables para sembrar %s. Los parámetros climáticos se encuentran dentro de los rangos óptimos.",
-                    cropName);
-        }
-
-        String limitingFactor = findLimitingFactor(scores);
-
-        return switch (riskLevel) {
-            case CAUTION -> String.format(
-                    "Precaución: %s presenta condiciones moderadas para sembrar %s. %s " +
-                            "Se recomienda monitorear las condiciones antes de la siembra.",
-                    limitingFactor, cropName, limitingFactor);
-            case NOT_RECOMMENDED -> String.format(
-                    "No se recomienda sembrar %s en este momento. %s " +
-                            "Considere cambiar la fecha de siembra o seleccionar una ubicación diferente.",
-                    cropName, limitingFactor);
-            default -> "";
-        };
-    }
-
-    private String findLimitingFactor(Map<String, Double> scores) {
-        String worst = scores.entrySet().stream()
+    private String findLimitingFactorKey(Map<String, Double> scores) {
+        return scores.entrySet().stream()
                 .min(Map.Entry.comparingByValue())
                 .map(Map.Entry::getKey)
                 .orElse("temperature");
-
-        return switch (worst) {
-            case "temperature" ->
-                    "La temperatura está fuera del rango óptimo para este cultivo.";
-            case "precipitation" ->
-                    "La precipitación es insuficiente o excesiva para las necesidades del cultivo.";
-            case "soilMoisture" ->
-                    "La humedad del suelo no se encuentra en el rango adecuado.";
-            case "elevation" ->
-                    "La altitud no es adecuada para este cultivo en esta ubicación.";
-            default ->
-                    "Existen condiciones climáticas desfavorables.";
-        };
-    }
-
-    private String cropNameEs(Crop crop) {
-        return switch (crop) {
-            case PAPA -> "papa";
-            case MAIZ -> "maíz";
-            case CAFE -> "café";
-        };
     }
 }

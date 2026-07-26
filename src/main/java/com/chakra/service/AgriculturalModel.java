@@ -9,7 +9,7 @@ public interface AgriculturalModel {
     record Result(
             double score,
             RiskLevel riskLevel,
-            String recommendation
+            String limitingFactor
     ) {}
 
     Result calculate(Crop crop, WeatherDataDTO weatherData);

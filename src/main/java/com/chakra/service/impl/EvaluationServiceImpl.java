@@ -39,7 +39,7 @@ public class EvaluationServiceImpl implements EvaluationService {
         evaluation.setElevation(weatherData.getElevation());
         evaluation.setScore(result.score());
         evaluation.setRiskLevel(result.riskLevel());
-        evaluation.setRecommendation(result.recommendation());
+        evaluation.setRecommendation(result.limitingFactor());
 
         Evaluation saved = evaluationRepository.save(evaluation);
 

@@ -18,6 +18,8 @@ public class EvaluationMapper {
     }
 
     public EvaluationResponse toResponse(Evaluation evaluation) {
-        return modelMapper.map(evaluation, EvaluationResponse.class);
+        EvaluationResponse response = modelMapper.map(evaluation, EvaluationResponse.class);
+        response.setLimitingFactor(evaluation.getRecommendation());
+        return response;
     }
 }

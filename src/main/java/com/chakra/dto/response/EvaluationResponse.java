@@ -27,6 +27,6 @@ public class EvaluationResponse {
     private Double elevation;
     private Double score;
     private RiskLevel riskLevel;
-    private String recommendation;
+    private String limitingFactor;
     private LocalDateTime createdAt;
 }

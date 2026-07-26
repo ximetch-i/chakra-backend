@@ -13,34 +13,32 @@ public class CropParameters {
             Trapezoid soilMoisture,
             Trapezoid elevation,
             double annualPrecipMin,
-            double annualPrecipMax,
-            double weightTemperature,
-            double weightPrecipitation,
-            double weightSoilMoisture,
-            double weightElevation
+            double annualPrecipMax
     ) {}
+
+    public static final double WEIGHT_TEMPERATURE = 0.263;
+    public static final double WEIGHT_PRECIPITATION = 0.558;
+    public static final double WEIGHT_SOIL_MOISTURE = 0.122;
+    public static final double WEIGHT_ELEVATION = 0.057;
 
     private static final Map<Crop, Params> PARAMS = Map.of(
             Crop.PAPA, new Params(
                     new Trapezoid(5, 17, 25, 30),
                     new Trapezoid(40, 60, 80, 95),
                     new Trapezoid(1000, 1000, 4200, 4200),
-                    400, 1200,
-                    0.30, 0.25, 0.35, 0.10
+                    400, 1200
             ),
             Crop.MAIZ, new Params(
-                    new Trapezoid(10, 22, 30, 40),
-                    new Trapezoid(35, 55, 75, 90),
-                    new Trapezoid(0, 0, 2500, 2500),
-                    500, 800,
-                    0.30, 0.30, 0.25, 0.15
+                    new Trapezoid(10, 15, 25, 30),
+                    new Trapezoid(40, 60, 80, 95),
+                    new Trapezoid(1500, 1500, 3800, 3800),
+                    500, 800
             ),
             Crop.CAFE, new Params(
-                    new Trapezoid(12, 18, 26, 32),
+                    new Trapezoid(15, 18, 22, 25),
                     new Trapezoid(40, 60, 80, 90),
-                    new Trapezoid(800, 800, 2000, 2000),
-                    1500, 2000,
-                    0.25, 0.20, 0.35, 0.20
+                    new Trapezoid(800, 1200, 2600, 2600),
+                    1500, 2000
             )
     );
 
